@@ -27,7 +27,7 @@ public class RegisterTempView {
 //        demo01(SparkConfig.getSparkSession());
 //      sparkJjjzEtf.collect();
 
-
+        Dataset<Row> sparkJjjzEtf1 = SparkRuntime.registerTempView("SELECT  * from adp_cfg.`info_this_jjjz_etf` WHERE rq = '20210419' LIMIT 10", "sparkJjjzEtf");
     }
 
     public static void demo01(SparkSession sparkSession) {

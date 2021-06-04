@@ -247,3 +247,150 @@ selct * from sparkJjjzEtf
 [INFO][2021-06-03 00:29:17,227][org.apache.spark.SparkContext:54] - Successfully stopped SparkContext
 [INFO][2021-06-03 00:29:17,228][org.apache.spark.util.ShutdownHookManager:54] - Shutdown hook called
 [INFO][2021-06-03 00:29:17,228][org.apache.spark.util.ShutdownHookManager:54] - Deleting directory C:\Users\14226\AppData\Local\Temp\spark-8501b8a2-0378-4a29-8ed1-e7a91733a0c5
+[INFO][2021-06-03 23:37:32,381][org.apache.spark.SparkContext:54] - Running Spark version 2.2.0
+[INFO][2021-06-03 23:37:32,810][org.apache.spark.SparkContext:54] - Submitted application: iDS-Spark::IdsRunner
+[INFO][2021-06-03 23:37:32,843][org.apache.spark.SecurityManager:54] - Changing view acls to: hello
+[INFO][2021-06-03 23:37:32,844][org.apache.spark.SecurityManager:54] - Changing modify acls to: hello
+[INFO][2021-06-03 23:37:32,845][org.apache.spark.SecurityManager:54] - Changing view acls groups to: 
+[INFO][2021-06-03 23:37:32,846][org.apache.spark.SecurityManager:54] - Changing modify acls groups to: 
+[INFO][2021-06-03 23:37:32,847][org.apache.spark.SecurityManager:54] - SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(hello); groups with view permissions: Set(); users  with modify permissions: Set(hello); groups with modify permissions: Set()
+[INFO][2021-06-03 23:37:34,554][org.apache.spark.util.Utils:54] - Successfully started service 'sparkDriver' on port 51044.
+[INFO][2021-06-03 23:37:34,586][org.apache.spark.SparkEnv:54] - Registering MapOutputTracker
+[INFO][2021-06-03 23:37:34,618][org.apache.spark.SparkEnv:54] - Registering BlockManagerMaster
+[INFO][2021-06-03 23:37:34,622][org.apache.spark.storage.BlockManagerMasterEndpoint:54] - Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+[INFO][2021-06-03 23:37:34,624][org.apache.spark.storage.BlockManagerMasterEndpoint:54] - BlockManagerMasterEndpoint up
+[INFO][2021-06-03 23:37:34,640][org.apache.spark.storage.DiskBlockManager:54] - Created local directory at C:\Users\14226\AppData\Local\Temp\blockmgr-7f703ed5-250e-4458-8482-b76d6d1c1903
+[INFO][2021-06-03 23:37:34,670][org.apache.spark.storage.memory.MemoryStore:54] - MemoryStore started with capacity 3.8 GB
+[INFO][2021-06-03 23:37:34,736][org.apache.spark.SparkEnv:54] - Registering OutputCommitCoordinator
+[INFO][2021-06-03 23:37:34,824][org.spark_project.jetty.util.log:192] - Logging initialized @4327ms
+[INFO][2021-06-03 23:37:34,888][org.spark_project.jetty.server.Server:345] - jetty-9.3.z-SNAPSHOT
+[INFO][2021-06-03 23:37:34,899][org.spark_project.jetty.server.Server:403] - Started @4403ms
+[INFO][2021-06-03 23:37:34,923][org.spark_project.jetty.server.AbstractConnector:270] - Started ServerConnector@6b174356{HTTP/1.1,[http/1.1]}{0.0.0.0:4040}
+[INFO][2021-06-03 23:37:34,924][org.apache.spark.util.Utils:54] - Successfully started service 'SparkUI' on port 4040.
+[INFO][2021-06-03 23:37:34,943][org.spark_project.jetty.server.handler.ContextHandler:781] - Started o.s.j.s.ServletContextHandler@25f9407e{/jobs,null,AVAILABLE,@Spark}
+[INFO][2021-06-03 23:37:34,944][org.spark_project.jetty.server.handler.ContextHandler:781] - Started o.s.j.s.ServletContextHandler@7db534f2{/jobs/json,null,AVAILABLE,@Spark}
+[INFO][2021-06-03 23:37:34,945][org.spark_project.jetty.server.handler.ContextHandler:781] - Started o.s.j.s.ServletContextHandler@7a56812e{/jobs/job,null,AVAILABLE,@Spark}
+[INFO][2021-06-03 23:37:34,946][org.spark_project.jetty.server.handler.ContextHandler:781] - Started o.s.j.s.ServletContextHandler@2f4854d6{/jobs/job/json,null,AVAILABLE,@Spark}
+[INFO][2021-06-03 23:37:34,946][org.spark_project.jetty.server.handler.ContextHandler:781] - Started o.s.j.s.ServletContextHandler@7e70bd39{/stages,null,AVAILABLE,@Spark}
+[INFO][2021-06-03 23:37:34,947][org.spark_project.jetty.server.handler.ContextHandler:781] - Started o.s.j.s.ServletContextHandler@6de54b40{/stages/json,null,AVAILABLE,@Spark}
+[INFO][2021-06-03 23:37:34,948][org.spark_project.jetty.server.handler.ContextHandler:781] - Started o.s.j.s.ServletContextHandler@388ffbc2{/stages/stage,null,AVAILABLE,@Spark}
+[INFO][2021-06-03 23:37:34,949][org.spark_project.jetty.server.handler.ContextHandler:781] - Started o.s.j.s.ServletContextHandler@2187fff7{/stages/stage/json,null,AVAILABLE,@Spark}
+[INFO][2021-06-03 23:37:34,949][org.spark_project.jetty.server.handler.ContextHandler:781] - Started o.s.j.s.ServletContextHandler@21d5c1a0{/stages/pool,null,AVAILABLE,@Spark}
+[INFO][2021-06-03 23:37:34,950][org.spark_project.jetty.server.handler.ContextHandler:781] - Started o.s.j.s.ServletContextHandler@538613b3{/stages/pool/json,null,AVAILABLE,@Spark}
+[INFO][2021-06-03 23:37:34,951][org.spark_project.jetty.server.handler.ContextHandler:781] - Started o.s.j.s.ServletContextHandler@11389053{/storage,null,AVAILABLE,@Spark}
+[INFO][2021-06-03 23:37:34,952][org.spark_project.jetty.server.handler.ContextHandler:781] - Started o.s.j.s.ServletContextHandler@3ec11999{/storage/json,null,AVAILABLE,@Spark}
+[INFO][2021-06-03 23:37:34,952][org.spark_project.jetty.server.handler.ContextHandler:781] - Started o.s.j.s.ServletContextHandler@9f46d94{/storage/rdd,null,AVAILABLE,@Spark}
+[INFO][2021-06-03 23:37:34,953][org.spark_project.jetty.server.handler.ContextHandler:781] - Started o.s.j.s.ServletContextHandler@2e77b8cf{/storage/rdd/json,null,AVAILABLE,@Spark}
+[INFO][2021-06-03 23:37:34,954][org.spark_project.jetty.server.handler.ContextHandler:781] - Started o.s.j.s.ServletContextHandler@67ef029{/environment,null,AVAILABLE,@Spark}
+[INFO][2021-06-03 23:37:34,955][org.spark_project.jetty.server.handler.ContextHandler:781] - Started o.s.j.s.ServletContextHandler@6e57e95e{/environment/json,null,AVAILABLE,@Spark}
+[INFO][2021-06-03 23:37:34,956][org.spark_project.jetty.server.handler.ContextHandler:781] - Started o.s.j.s.ServletContextHandler@56db847e{/executors,null,AVAILABLE,@Spark}
+[INFO][2021-06-03 23:37:34,957][org.spark_project.jetty.server.handler.ContextHandler:781] - Started o.s.j.s.ServletContextHandler@560cbf1a{/executors/json,null,AVAILABLE,@Spark}
+[INFO][2021-06-03 23:37:34,958][org.spark_project.jetty.server.handler.ContextHandler:781] - Started o.s.j.s.ServletContextHandler@551a20d6{/executors/threadDump,null,AVAILABLE,@Spark}
+[INFO][2021-06-03 23:37:34,959][org.spark_project.jetty.server.handler.ContextHandler:781] - Started o.s.j.s.ServletContextHandler@64c2b546{/executors/threadDump/json,null,AVAILABLE,@Spark}
+[INFO][2021-06-03 23:37:34,966][org.spark_project.jetty.server.handler.ContextHandler:781] - Started o.s.j.s.ServletContextHandler@7a11c4c7{/static,null,AVAILABLE,@Spark}
+[INFO][2021-06-03 23:37:34,967][org.spark_project.jetty.server.handler.ContextHandler:781] - Started o.s.j.s.ServletContextHandler@3f093abe{/,null,AVAILABLE,@Spark}
+[INFO][2021-06-03 23:37:34,968][org.spark_project.jetty.server.handler.ContextHandler:781] - Started o.s.j.s.ServletContextHandler@4eeea57d{/api,null,AVAILABLE,@Spark}
+[INFO][2021-06-03 23:37:34,968][org.spark_project.jetty.server.handler.ContextHandler:781] - Started o.s.j.s.ServletContextHandler@72c927f1{/jobs/job/kill,null,AVAILABLE,@Spark}
+[INFO][2021-06-03 23:37:34,969][org.spark_project.jetty.server.handler.ContextHandler:781] - Started o.s.j.s.ServletContextHandler@3dd69f5a{/stages/stage/kill,null,AVAILABLE,@Spark}
+[INFO][2021-06-03 23:37:34,972][org.apache.spark.ui.SparkUI:54] - Bound SparkUI to 0.0.0.0, and started at http://192.168.52.10:4040
+[INFO][2021-06-03 23:37:35,046][org.apache.spark.executor.Executor:54] - Starting executor ID driver on host localhost
+[INFO][2021-06-03 23:37:35,082][org.apache.spark.util.Utils:54] - Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 58053.
+[INFO][2021-06-03 23:37:35,084][org.apache.spark.network.netty.NettyBlockTransferService:54] - Server created on 192.168.52.10:58053
+[INFO][2021-06-03 23:37:35,085][org.apache.spark.storage.BlockManager:54] - Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+[INFO][2021-06-03 23:37:35,088][org.apache.spark.storage.BlockManagerMaster:54] - Registering BlockManager BlockManagerId(driver, 192.168.52.10, 58053, None)
+[INFO][2021-06-03 23:37:35,091][org.apache.spark.storage.BlockManagerMasterEndpoint:54] - Registering block manager 192.168.52.10:58053 with 3.8 GB RAM, BlockManagerId(driver, 192.168.52.10, 58053, None)
+[INFO][2021-06-03 23:37:35,095][org.apache.spark.storage.BlockManagerMaster:54] - Registered BlockManager BlockManagerId(driver, 192.168.52.10, 58053, None)
+[INFO][2021-06-03 23:37:35,096][org.apache.spark.storage.BlockManager:54] - Initialized BlockManager: BlockManagerId(driver, 192.168.52.10, 58053, None)
+[INFO][2021-06-03 23:37:35,282][org.spark_project.jetty.server.handler.ContextHandler:781] - Started o.s.j.s.ServletContextHandler@470a9030{/metrics/json,null,AVAILABLE,@Spark}
+[INFO][2021-06-03 23:37:35,324][org.apache.spark.sql.internal.SharedState:54] - loading hive config file: file:/D:/develop/IntelliJ%20IDEA%202019.1.2/ideaWorkspace/spark-181205/target/classes/hive-site.xml
+[INFO][2021-06-03 23:37:35,342][org.apache.spark.sql.internal.SharedState:54] - Setting hive.metastore.warehouse.dir ('/user/hive/warehouse') to the value of spark.sql.warehouse.dir ('hdfs://node01:8020/user/hive/warehouse').
+[INFO][2021-06-03 23:37:35,343][org.apache.spark.sql.internal.SharedState:54] - Warehouse path is 'hdfs://node01:8020/user/hive/warehouse'.
+[INFO][2021-06-03 23:37:35,349][org.spark_project.jetty.server.handler.ContextHandler:781] - Started o.s.j.s.ServletContextHandler@4564e94b{/SQL,null,AVAILABLE,@Spark}
+[INFO][2021-06-03 23:37:35,350][org.spark_project.jetty.server.handler.ContextHandler:781] - Started o.s.j.s.ServletContextHandler@51745f40{/SQL/json,null,AVAILABLE,@Spark}
+[INFO][2021-06-03 23:37:35,350][org.spark_project.jetty.server.handler.ContextHandler:781] - Started o.s.j.s.ServletContextHandler@667e34b1{/SQL/execution,null,AVAILABLE,@Spark}
+[INFO][2021-06-03 23:37:35,351][org.spark_project.jetty.server.handler.ContextHandler:781] - Started o.s.j.s.ServletContextHandler@6dba847b{/SQL/execution/json,null,AVAILABLE,@Spark}
+[INFO][2021-06-03 23:37:35,353][org.spark_project.jetty.server.handler.ContextHandler:781] - Started o.s.j.s.ServletContextHandler@37d00a23{/static/sql,null,AVAILABLE,@Spark}
+[INFO][2021-06-03 23:37:35,890][org.apache.spark.sql.hive.HiveUtils:54] - Initializing HiveMetastoreConnection version 1.2.1 using Spark classes.
+[INFO][2021-06-03 23:37:36,492][hive.metastore:376] - Trying to connect to metastore with URI thrift://node01:9083
+[INFO][2021-06-03 23:37:36,537][hive.metastore:472] - Connected to metastore.
+[WARN][2021-06-03 23:37:37,484][org.apache.hadoop.hdfs.shortcircuit.DomainSocketFactory:117] - The short-circuit local reads feature cannot be used because UNIX Domain sockets are not available on Windows.
+[INFO][2021-06-03 23:37:37,583][org.apache.hadoop.hive.ql.session.SessionState:641] - Created local directory: C:/Users/14226/AppData/Local/Temp/e5f114c7-6d37-435d-951e-b9d4c9f1416b_resources
+[INFO][2021-06-03 23:37:37,589][org.apache.hadoop.hive.ql.session.SessionState:641] - Created HDFS directory: /tmp/hive/hello/e5f114c7-6d37-435d-951e-b9d4c9f1416b
+[INFO][2021-06-03 23:37:37,592][org.apache.hadoop.hive.ql.session.SessionState:641] - Created local directory: C:/Users/14226/AppData/Local/Temp/hello/e5f114c7-6d37-435d-951e-b9d4c9f1416b
+[INFO][2021-06-03 23:37:37,595][org.apache.hadoop.hive.ql.session.SessionState:641] - Created HDFS directory: /tmp/hive/hello/e5f114c7-6d37-435d-951e-b9d4c9f1416b/_tmp_space.db
+[INFO][2021-06-03 23:37:37,598][org.apache.spark.sql.hive.client.HiveClientImpl:54] - Warehouse location for Hive client (version 1.2.1) is hdfs://node01:8020/user/hive/warehouse
+[INFO][2021-06-03 23:37:37,768][org.apache.hadoop.hive.ql.session.SessionState:641] - Created local directory: C:/Users/14226/AppData/Local/Temp/88271b4c-94d6-4cb9-ba9b-ec14f81c581f_resources
+[INFO][2021-06-03 23:37:37,771][org.apache.hadoop.hive.ql.session.SessionState:641] - Created HDFS directory: /tmp/hive/hello/88271b4c-94d6-4cb9-ba9b-ec14f81c581f
+[INFO][2021-06-03 23:37:37,774][org.apache.hadoop.hive.ql.session.SessionState:641] - Created local directory: C:/Users/14226/AppData/Local/Temp/hello/88271b4c-94d6-4cb9-ba9b-ec14f81c581f
+[INFO][2021-06-03 23:37:37,778][org.apache.hadoop.hive.ql.session.SessionState:641] - Created HDFS directory: /tmp/hive/hello/88271b4c-94d6-4cb9-ba9b-ec14f81c581f/_tmp_space.db
+[INFO][2021-06-03 23:37:37,780][org.apache.spark.sql.hive.client.HiveClientImpl:54] - Warehouse location for Hive client (version 1.2.1) is hdfs://node01:8020/user/hive/warehouse
+[INFO][2021-06-03 23:37:37,831][org.apache.spark.sql.execution.streaming.state.StateStoreCoordinatorRef:54] - Registered StateStoreCoordinator endpoint
+[INFO][2021-06-03 23:37:37,839][org.apache.spark.sql.execution.SparkSqlParser:54] - Parsing command: SELECT  * from adp_cfg.`info_this_jjjz_etf` WHERE rq = '20210419' LIMIT 10
+[INFO][2021-06-03 23:37:38,205][org.apache.spark.sql.catalyst.parser.CatalystSqlParser:54] - Parsing command: int
+[INFO][2021-06-03 23:37:38,221][org.apache.spark.sql.catalyst.parser.CatalystSqlParser:54] - Parsing command: int
+[INFO][2021-06-03 23:37:38,221][org.apache.spark.sql.catalyst.parser.CatalystSqlParser:54] - Parsing command: string
+[INFO][2021-06-03 23:37:38,222][org.apache.spark.sql.catalyst.parser.CatalystSqlParser:54] - Parsing command: string
+[INFO][2021-06-03 23:37:38,223][org.apache.spark.sql.catalyst.parser.CatalystSqlParser:54] - Parsing command: decimal(12,0)
+[INFO][2021-06-03 23:37:38,225][org.apache.spark.sql.catalyst.parser.CatalystSqlParser:54] - Parsing command: decimal(10,4)
+[INFO][2021-06-03 23:37:38,226][org.apache.spark.sql.catalyst.parser.CatalystSqlParser:54] - Parsing command: decimal(16,2)
+[INFO][2021-06-03 23:37:38,227][org.apache.spark.sql.catalyst.parser.CatalystSqlParser:54] - Parsing command: decimal(16,2)
+[INFO][2021-06-03 23:37:38,227][org.apache.spark.sql.catalyst.parser.CatalystSqlParser:54] - Parsing command: decimal(16,2)
+[INFO][2021-06-03 23:37:38,228][org.apache.spark.sql.catalyst.parser.CatalystSqlParser:54] - Parsing command: decimal(10,4)
+[INFO][2021-06-03 23:37:38,228][org.apache.spark.sql.catalyst.parser.CatalystSqlParser:54] - Parsing command: decimal(10,4)
+[INFO][2021-06-03 23:37:38,229][org.apache.spark.sql.catalyst.parser.CatalystSqlParser:54] - Parsing command: decimal(9,4)
+[INFO][2021-06-03 23:37:38,230][org.apache.spark.sql.catalyst.parser.CatalystSqlParser:54] - Parsing command: decimal(10,4)
+[INFO][2021-06-03 23:37:38,230][org.apache.spark.sql.catalyst.parser.CatalystSqlParser:54] - Parsing command: decimal(10,4)
+[INFO][2021-06-03 23:37:38,230][org.apache.spark.sql.catalyst.parser.CatalystSqlParser:54] - Parsing command: decimal(9,4)
+[INFO][2021-06-03 23:37:38,231][org.apache.spark.sql.catalyst.parser.CatalystSqlParser:54] - Parsing command: decimal(9,6)
+[INFO][2021-06-03 23:37:38,231][org.apache.spark.sql.catalyst.parser.CatalystSqlParser:54] - Parsing command: decimal(9,3)
+[INFO][2021-06-03 23:37:38,232][org.apache.spark.sql.catalyst.parser.CatalystSqlParser:54] - Parsing command: decimal(9,4)
+[INFO][2021-06-03 23:37:38,232][org.apache.spark.sql.catalyst.parser.CatalystSqlParser:54] - Parsing command: decimal(9,4)
+[INFO][2021-06-03 23:37:38,232][org.apache.spark.sql.catalyst.parser.CatalystSqlParser:54] - Parsing command: decimal(16,2)
+[INFO][2021-06-03 23:37:38,233][org.apache.spark.sql.catalyst.parser.CatalystSqlParser:54] - Parsing command: decimal(16,2)
+[INFO][2021-06-03 23:37:38,233][org.apache.spark.sql.catalyst.parser.CatalystSqlParser:54] - Parsing command: decimal(10,4)
+[INFO][2021-06-03 23:37:38,233][org.apache.spark.sql.catalyst.parser.CatalystSqlParser:54] - Parsing command: decimal(9,4)
+[INFO][2021-06-03 23:37:38,234][org.apache.spark.sql.catalyst.parser.CatalystSqlParser:54] - Parsing command: decimal(10,6)
+[INFO][2021-06-03 23:37:38,234][org.apache.spark.sql.catalyst.parser.CatalystSqlParser:54] - Parsing command: decimal(9,6)
+[INFO][2021-06-03 23:37:38,235][org.apache.spark.sql.catalyst.parser.CatalystSqlParser:54] - Parsing command: decimal(9,2)
+[INFO][2021-06-03 23:37:38,248][org.apache.spark.sql.catalyst.parser.CatalystSqlParser:54] - Parsing command: array<string>
+[INFO][2021-06-03 23:37:39,848][org.apache.spark.sql.execution.SparkSqlParser:54] - Parsing command: sparkJjjzEtf
+[INFO][2021-06-03 23:37:40,006][org.apache.spark.sql.execution.SparkSqlParser:54] - Parsing command: desc adp_bas.info_this_jjjz_etf
+[INFO][2021-06-03 23:37:40,052][org.apache.spark.sql.catalyst.parser.CatalystSqlParser:54] - Parsing command: int
+[INFO][2021-06-03 23:37:40,052][org.apache.spark.sql.catalyst.parser.CatalystSqlParser:54] - Parsing command: int
+[INFO][2021-06-03 23:37:40,053][org.apache.spark.sql.catalyst.parser.CatalystSqlParser:54] - Parsing command: string
+[INFO][2021-06-03 23:37:40,054][org.apache.spark.sql.catalyst.parser.CatalystSqlParser:54] - Parsing command: string
+[INFO][2021-06-03 23:37:40,054][org.apache.spark.sql.catalyst.parser.CatalystSqlParser:54] - Parsing command: decimal(12,0)
+[INFO][2021-06-03 23:37:40,054][org.apache.spark.sql.catalyst.parser.CatalystSqlParser:54] - Parsing command: decimal(10,4)
+[INFO][2021-06-03 23:37:40,055][org.apache.spark.sql.catalyst.parser.CatalystSqlParser:54] - Parsing command: decimal(16,2)
+[INFO][2021-06-03 23:37:40,055][org.apache.spark.sql.catalyst.parser.CatalystSqlParser:54] - Parsing command: decimal(16,2)
+[INFO][2021-06-03 23:37:40,056][org.apache.spark.sql.catalyst.parser.CatalystSqlParser:54] - Parsing command: decimal(16,2)
+[INFO][2021-06-03 23:37:40,056][org.apache.spark.sql.catalyst.parser.CatalystSqlParser:54] - Parsing command: decimal(10,4)
+[INFO][2021-06-03 23:37:40,057][org.apache.spark.sql.catalyst.parser.CatalystSqlParser:54] - Parsing command: decimal(10,4)
+[INFO][2021-06-03 23:37:40,057][org.apache.spark.sql.catalyst.parser.CatalystSqlParser:54] - Parsing command: decimal(9,4)
+[INFO][2021-06-03 23:37:40,058][org.apache.spark.sql.catalyst.parser.CatalystSqlParser:54] - Parsing command: decimal(10,4)
+[INFO][2021-06-03 23:37:40,058][org.apache.spark.sql.catalyst.parser.CatalystSqlParser:54] - Parsing command: decimal(10,4)
+[INFO][2021-06-03 23:37:40,059][org.apache.spark.sql.catalyst.parser.CatalystSqlParser:54] - Parsing command: decimal(9,4)
+[INFO][2021-06-03 23:37:40,059][org.apache.spark.sql.catalyst.parser.CatalystSqlParser:54] - Parsing command: decimal(9,6)
+[INFO][2021-06-03 23:37:40,059][org.apache.spark.sql.catalyst.parser.CatalystSqlParser:54] - Parsing command: decimal(9,3)
+[INFO][2021-06-03 23:37:40,060][org.apache.spark.sql.catalyst.parser.CatalystSqlParser:54] - Parsing command: decimal(9,4)
+[INFO][2021-06-03 23:37:40,060][org.apache.spark.sql.catalyst.parser.CatalystSqlParser:54] - Parsing command: decimal(9,4)
+[INFO][2021-06-03 23:37:40,061][org.apache.spark.sql.catalyst.parser.CatalystSqlParser:54] - Parsing command: decimal(16,2)
+[INFO][2021-06-03 23:37:40,062][org.apache.spark.sql.catalyst.parser.CatalystSqlParser:54] - Parsing command: decimal(16,2)
+[INFO][2021-06-03 23:37:40,063][org.apache.spark.sql.catalyst.parser.CatalystSqlParser:54] - Parsing command: decimal(10,4)
+[INFO][2021-06-03 23:37:40,063][org.apache.spark.sql.catalyst.parser.CatalystSqlParser:54] - Parsing command: decimal(9,4)
+[INFO][2021-06-03 23:37:40,063][org.apache.spark.sql.catalyst.parser.CatalystSqlParser:54] - Parsing command: decimal(10,6)
+[INFO][2021-06-03 23:37:40,064][org.apache.spark.sql.catalyst.parser.CatalystSqlParser:54] - Parsing command: decimal(9,6)
+[INFO][2021-06-03 23:37:40,064][org.apache.spark.sql.catalyst.parser.CatalystSqlParser:54] - Parsing command: decimal(9,2)
+[INFO][2021-06-03 23:37:40,368][org.apache.spark.sql.catalyst.expressions.codegen.CodeGenerator:54] - Code generated in 200.7014 ms
+[INFO][2021-06-03 23:37:40,376][com.apex.bigdata.spark_01.OverwriteHiveOnePartitionBySql:82] - No table named: adp_bas.info_this_jjjz_etf
+[INFO][2021-06-03 23:37:40,379][org.apache.spark.SparkContext:54] - Invoking stop() from shutdown hook
+[INFO][2021-06-03 23:37:40,385][org.spark_project.jetty.server.AbstractConnector:310] - Stopped Spark@6b174356{HTTP/1.1,[http/1.1]}{0.0.0.0:4040}
+[INFO][2021-06-03 23:37:40,387][org.apache.spark.ui.SparkUI:54] - Stopped Spark web UI at http://192.168.52.10:4040
+[INFO][2021-06-03 23:37:40,397][org.apache.spark.MapOutputTrackerMasterEndpoint:54] - MapOutputTrackerMasterEndpoint stopped!
+[INFO][2021-06-03 23:37:40,404][org.apache.spark.storage.memory.MemoryStore:54] - MemoryStore cleared
+[INFO][2021-06-03 23:37:40,404][org.apache.spark.storage.BlockManager:54] - BlockManager stopped
+[INFO][2021-06-03 23:37:40,410][org.apache.spark.storage.BlockManagerMaster:54] - BlockManagerMaster stopped
+[INFO][2021-06-03 23:37:40,415][org.apache.spark.scheduler.OutputCommitCoordinator$OutputCommitCoordinatorEndpoint:54] - OutputCommitCoordinator stopped!
+[INFO][2021-06-03 23:37:40,417][org.apache.spark.SparkContext:54] - Successfully stopped SparkContext
+[INFO][2021-06-03 23:37:40,417][org.apache.spark.util.ShutdownHookManager:54] - Shutdown hook called
+[INFO][2021-06-03 23:37:40,418][org.apache.spark.util.ShutdownHookManager:54] - Deleting directory C:\Users\14226\AppData\Local\Temp\spark-e9ee0633-fb0a-4f2f-a786-5b95c33c0123

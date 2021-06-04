@@ -139,7 +139,7 @@ public class SparkRuntime {
                 sqlText = "create table " + dbName + "." + targetTableName +
                         "  as select * from " + viewName; //using hive options(fileFormat 'parquet')
                 exec(sqlText);
-                //refreshHiveTable(dbName, targetTableName);
+//                refreshHiveTable(dbName, targetTableName);
                 sqlText = "select * from " + dbName + "." + targetTableName;
                 tempTableList.add(dbName + "." + targetTableName);
                 SparkConfig.getSparkSession().sql(sqlText).createOrReplaceTempView(viewName);

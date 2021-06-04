@@ -17,7 +17,7 @@ object WordCount {
     val wordCount: Array[(String, Int)] = sc.textFile("in").flatMap(_.split(" ")).map((_,1)).reduceByKey(_+_).collect()
     wordCount.foreach(println)
     sc.stop()
-//    println(wordCount)  Lscala.Tuple2;@4cdb8504
+    //println(wordCount)  Lscala.Tuple2;@4cdb8504
 
   }
 
