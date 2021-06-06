@@ -1,12 +1,11 @@
 package com.apex.bigdata.template;
 
- import com.apex.bigdata.template.MyEnum.Conf;
-import org.apache.commons.lang.StringUtils;
+ import org.apache.commons.lang.StringUtils;
 import org.apache.spark.api.java.function.ForeachPartitionFunction;
 import org.apache.spark.broadcast.Broadcast;
 import org.apache.spark.sql.Dataset;
 import org.apache.spark.sql.Row;
- import org.apache.spark.util.LongAccumulator;
+import org.apache.spark.util.LongAccumulator;
 
 import java.io.IOException;
 import java.sql.*;
@@ -18,13 +17,13 @@ public class PhoenixUtils {
     private static String url;
     private static String driver;
     private static Connection connection;
-    private static Properties jdbc;
+    private static Properties props ;
 
     public PhoenixUtils() {
     }
 
     public static void init() throws IOException {
-        Properties props = new Properties();
+        props = new Properties();
         props.load(PhoenixUtils.class.getResourceAsStream("/properties.properties"));
 
         try {
@@ -38,7 +37,7 @@ public class PhoenixUtils {
                 password = props.getProperty("phoenix.password");
             }
             connection = DriverManager.getConnection(url, user, password);
-            System.out.println(driver+"\t"+url);
+            System.out.println(driver + "\t" + url);
             System.out.println(connection);
         } catch (Exception var1) {
             var1.printStackTrace();
@@ -107,38 +106,41 @@ public class PhoenixUtils {
     public static void saveToPhoenix(Dataset<Row> ds, final String namaspace, final String table) {
         LongAccumulator executeNum = SparkConfig.javaSparkContext.sc().longAccumulator(table + "_num");
         final Broadcast<List<String>> broadcastPhoenixFields = SparkConfig.javaSparkContext.broadcast(getTableField(namaspace, table));
-        final Broadcast<MyProPerties> broadcastConf = SparkConfig.javaSparkContext.broadcast(PropertyUtils.confs.getConfWithNoPrefix(Conf.phoenix));
+//        final Broadcast<MyProPerties> broadcastConf = SparkConfig.javaSparkContext.broadcast(PropertyUtils.confs.getConfWithNoPrefix(Conf.phoenix));
         final Broadcast<String> broadcastSql = SparkConfig.javaSparkContext.broadcast(getUpsertSql(namaspace, table, broadcastPhoenixFields.getValue()));
-        ds.repartition(Integer.valueOf(PropertyUtils.confs.get("spark.default.parallelism"))/*SparkRuntime.getSparkTotalCores()*10*/).foreachPartition(new ForeachPartitionFunction<Row>() {
-            @Override
-            public void call(Iterator<Row> rows) throws Exception {
-                List<String> phoenixFields = broadcastPhoenixFields.getValue();
-                MyProPerties confs = broadcastConf.getValue();
-                String sql = broadcastSql.getValue();
-                //Class.forName(confs.get("phoenixDriver"));
-                Connection connection = getNewConnection();
-                PreparedStatement preparedStatement = connection.prepareStatement(sql);
-                while (rows.hasNext()) {
-                    Row row = rows.next();
-                    for (int i = 1; i <= phoenixFields.size(); i++) {
-                        try {
-                            preparedStatement.setString(i, row.getAs(phoenixFields.get(i - 1)) == null ? "" : row.getAs(phoenixFields.get(i - 1)).toString());
-                        } catch (IllegalArgumentException e) {
-                            preparedStatement.setString(i, "");
-                        }
-                    }
-                    try {
-                        preparedStatement.executeUpdate();
-                    } catch (Exception e) {
+        ds.repartition(Integer.valueOf(props.getProperty("spark.default.parallelism")))
+                .foreachPartition(new ForeachPartitionFunction<Row>() {
+                    @Override
+                    public void call(Iterator<Row> rows) throws Exception {
+                        List<String> phoenixFields = broadcastPhoenixFields.getValue();
+//                MyProPerties confs = broadcastConf.getValue();
+                        String sql = broadcastSql.getValue();
+                        //Class.forName(confs.get("phoenixDriver"));
+                        Connection connection = getNewConnection();
+                        PreparedStatement preparedStatement = connection.prepareStatement(sql);
+                        while (rows.hasNext()) {
+                            Row row = rows.next();
+                            for (int i = 1; i <= phoenixFields.size(); i++) {
+                                try {
+                                    preparedStatement.setString(i, row.getAs(phoenixFields.get(i - 1)) == null ? "" : row.getAs(phoenixFields.get(i - 1)).toString());
+                                } catch (IllegalArgumentException e) {
+                                    preparedStatement.setString(i, "");
+                                }
+                            }
+                            try {
+                                preparedStatement.executeUpdate();
+                            } catch (Exception e) {
 
-                    } finally {
-                        connection.commit();
-                        executeNum.add(1);
+                            } finally {
+                                // must commit
+                                connection.commit();
+                                executeNum.add(1);
+                            }
+                        }
+                        connection.close();
                     }
-                }
-                connection.close();
-            }
-        });
+                });
+        System.out.println("执行的记录条数: " + executeNum );
     }
 
 

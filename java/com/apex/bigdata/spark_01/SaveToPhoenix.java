@@ -19,7 +19,7 @@ public class SaveToPhoenix {
         SparkConfig.initStatic();
         Dataset<Row> sparkJjjzEtf = SparkRuntime.registerTempView("SELECT  * from adp_bas.info_this_jjjz_etf WHERE rq = '20210419' LIMIT 1", "sparkJjjzEtf");
         PhoenixUtils.init();
-        PhoenixUtils.saveToPhoenix(sparkJjjzEtf,"apex","info_this_jjjz_etf");
+        PhoenixUtils.saveToPhoenix(sparkJjjzEtf,"APEX","INFO_THIS_JJJZ_ETF");
         PhoenixUtils.close();
     }
 

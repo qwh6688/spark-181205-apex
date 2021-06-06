@@ -26,6 +26,67 @@ public class SparkRuntime {
     private static String mode = null;
     private static String date = new SimpleDateFormat("yyyyMMdd").format(new Date(System.currentTimeMillis()));
 
+
+    public static Dataset<Row> execReadFromMysql(String sqlText, Properties properties){
+        try {
+            StringBuilder exec_Buffer = new StringBuilder(sqlText);
+            String run_Sql = exec_Buffer.toString();
+            if (properties.isEmpty()) {
+                throw new Exception("Please check your MySQL Properties setting");
+            }
+            //Mysql 数据读取
+            return SparkConfig.getSparkSession().read().jdbc(properties.getProperty("url"), " ( " + run_Sql + " ) t", properties);
+        } catch (Exception e) {
+            logger.info(sqlText);
+            logger.error("Running Error Mysql: ", e.fillInStackTrace());
+            System.exit(1);
+        }
+        return null;
+    }
+
+    public static Dataset<Row> initSparkResultTempView(String viewName, String dbname, String tablename){
+        /*
+        将spark临时表与hive表数据类型进行对应初始化
+         */
+        cacheHiveTableSchema(dbname, tablename);
+        List<String> columnName = new ArrayList<>(); //字段名
+        List<String> columnType = new ArrayList<>(); //字段类型
+        if (cacheTableSchema.containsKey(dbname + "." + tablename)){
+            columnName = cacheTableSchema.get(dbname + "." + tablename)._1();
+            columnType = cacheTableSchema.get(dbname + "." + tablename)._2();
+            StringBuffer sql = new StringBuffer("select ");
+            try{
+                String[] fileds = exec("select * from " + viewName).schema().fieldNames();
+                Set<String> fieldSet = new HashSet<>();
+                for (int i=0; i<fileds.length; i++){
+                    fieldSet.add(fileds[i].toLowerCase());
+                }
+                for (int i=0; i<columnName.size(); i++){
+                    if (fieldSet.contains(columnName.get(i).toLowerCase())){
+                        sql.append("cast(" + columnName.get(i) + " as " + columnType.get(i) + ") as " + columnName.get(i));
+                    }else {
+                        sql.append("cast(null as " + columnType.get(i) + ") as " + columnName.get(i));
+                    }
+
+                    if (columnName.size() != (i + 1)){
+                        sql.append(",");
+                    }
+                }
+                sql.append(" from " + viewName);
+                Dataset<Row> ds = SparkConfig.getSparkSession().sql(sql.toString());
+                ds.createOrReplaceTempView(viewName);
+                return ds;
+            }catch (Exception e){
+                logger.info("Use spark tempView " + viewName + " initSparkResultTempView table:" + dbname + "." + tablename);
+                logger.error("Running Error : ", e.fillInStackTrace());
+                System.exit(1);
+            }
+        }else{
+            logger.info("No table named: " +  dbname + "." + tablename);
+        }
+        return null;
+
+    }
     public static boolean isDebug() {
         if (mode == null) {
             if (PropertyUtils.arguments.containsKey("MODE")) {
@@ -244,5 +305,8 @@ public class SparkRuntime {
             System.exit(1);
         }
     }
+
+
+
 
 }
