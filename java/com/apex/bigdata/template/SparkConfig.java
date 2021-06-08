@@ -89,20 +89,51 @@ public class SparkConfig {
         javaSparkContext = JavaSparkContext.fromSparkContext(spark.sparkContext());
         javaSparkContext.setLocalProperty("spark.scheduler.pool", null);
     }
+    public static void initStatic2(){
+        String WarehourDir = "hdfs://node01:8020/user/hive/warehouse";
+        String HiveMetastoreUris = "thrift://node01:9083";;
+        SparkConf sparkConf = new SparkConf().setMaster("local").setAppName("iDS-Spark::IdsRunner"); //spark://192.168.0.87:7077  local[*]
+        if (classes.length > 0){
+            sparkConf.registerKryoClasses(classes);
+        }
+//        sparkConf.set("spark.serializer", "org.apache.spark.serializer.KryoSerializer");
+        sparkConf.set("spark.default.parallelism", "30");
+        sparkConf.set("spark.memory.useLegacyMode", "true");
+
+        sparkConf.set("spark.driver.extraJavaOptions", "-XX:PermSize=128M -XX:MaxPermSize=256M");
+        sparkConf.set("spark.debug.maxToStringFields", "200");
+        sparkConf.set("spark.sql.autoBroadcastJoinThreshold", "-1");
+
+        sparkConf.set("spark.sql.parquet.writeLegacyFormat", "true");
+        sparkConf.set("spark.files.fetchTimeout", "9000");
+        sparkConf.set("spark.sql.shuffle.partitions", "50");
+
+        sparkConf.set("spark.sql.parquet.cacheMatadata", "true");
+//        sparkConf.set("spark.yarn.executor.memoryOverhead", "8192");
+        SparkSession.Builder builder = SparkSession.builder();
+        builder.config(sparkConf);
+        builder.config("spark.sql.warehouse.dir", WarehourDir);
+        builder.config("hive.metastore.uris", HiveMetastoreUris);
+        builder.enableHiveSupport();
+        spark = builder.getOrCreate();
+        javaSparkContext = JavaSparkContext.fromSparkContext(spark.sparkContext());
+        javaSparkContext.setLocalProperty("spark.scheduler.pool", null);
+    }
 
     public static void initStatic() {
-        String WarehourDir = "hdfs://node01:8020/user/hive/warehouse";
+        String WarehourDir = "hdfs://192.168.52.100:8020/user/hive/warehouse";
         //String HiveMetastoreUris = "thrift://cdh02.ebscncdh.com:9083";;
-        String HiveMetastoreUris = "thrift://node01:9083";
+        String HiveMetastoreUris = "thrift://192.168.52.100:9083";
 
         //本地 local[*]
-        //制定 spark://192.168.0.87:7077
-        SparkConf sparkConf = new SparkConf().setMaster("local[*]").setAppName("iDS-Spark::IdsRunner"); //spark://192.168.0.87:7077  local[*]
+        //指定 spark://192.168.52.110:7077
+        SparkConf sparkConf = new SparkConf().setMaster("local[*]").setAppName("iDS-Spark::IdsRunner")
+                .set("HADOOP_USER_NAME","hdfs"); //spark://192.168.0.87:7077  local[*]
         if (classes.length > 0) {
             sparkConf.registerKryoClasses(classes);
         }
         sparkConf.set("spark.serializer", "org.apache.spark.serializer.KryoSerializer");
-//        sparkConf.set("spark.default.parallelism", "30");
+        sparkConf.set("spark.default.parallelism", "30");
         sparkConf.set("spark.memory.useLegacyMode", "true");
 
         sparkConf.set("spark.driver.extraJavaOptions", "-XX:PermSize=128M -XX:MaxPermSize=256M");
@@ -112,12 +143,13 @@ public class SparkConfig {
         sparkConf.set("spark.sql.parquet.writeLegacyFormat", "true");
         sparkConf.set("spark.files.fetchTimeout", "9000");
 //        sparkConf.set("spark.sql.shuffle.partitions", "50");
-
+        sparkConf.set("hive.metastore.uris",HiveMetastoreUris);
         sparkConf.set("spark.sql.parquet.cacheMatadata", "true");
         sparkConf.set("spark.yarn.executor.memoryOverhead", "8192");
         SparkSession.Builder builder = SparkSession.builder();
         builder.config(sparkConf);
         builder.config("spark.sql.warehouse.dir", WarehourDir);
+        builder.config("hive.metastore.uris", HiveMetastoreUris);
         builder.enableHiveSupport();
         spark = builder.getOrCreate();
         javaSparkContext = JavaSparkContext.fromSparkContext(spark.sparkContext());

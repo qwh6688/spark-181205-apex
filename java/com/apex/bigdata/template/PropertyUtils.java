@@ -29,6 +29,7 @@ public class PropertyUtils {
         ClassLoader classLoader =  Thread.currentThread().getContextClassLoader();
         System.out.println("classLoader:"+classLoader);
         if (classLoader != null) {
+            //项目文件中有spark.properties 首先加载这个配置文件，没有 inputStream 为null，加载提交命令 --jars 后的public.properties
             InputStream inputStream = classLoader.getResourceAsStream(classParh);
             System.out.println("inputStream:"+inputStream);
             if (inputStream != null) {

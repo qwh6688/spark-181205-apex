@@ -181,6 +181,8 @@ public class SparkRuntime {
     //执行Spark语句
     public static Dataset<Row> exec(String sqlText) {
         try {
+
+//            SparkConfig.initStatic();
             return SparkConfig.getSparkSession().sql(sqlText);
         } catch (Exception e) {
             logger.info(sqlText);
