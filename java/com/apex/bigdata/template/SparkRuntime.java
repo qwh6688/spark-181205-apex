@@ -52,6 +52,7 @@ public class SparkRuntime {
         List<String> columnName = new ArrayList<>(); //字段名
         List<String> columnType = new ArrayList<>(); //字段类型
         if (cacheTableSchema.containsKey(dbname + "." + tablename)){
+            System.out.println("包含元数据: " + dbname + "." + tablename);
             columnName = cacheTableSchema.get(dbname + "." + tablename)._1();
             columnType = cacheTableSchema.get(dbname + "." + tablename)._2();
             StringBuffer sql = new StringBuffer("select ");
@@ -74,6 +75,9 @@ public class SparkRuntime {
                 }
                 sql.append(" from " + viewName);
                 Dataset<Row> ds = SparkConfig.getSparkSession().sql(sql.toString());
+
+                System.out.println("initSparkResultTempView : " + sql.toString());
+
                 ds.createOrReplaceTempView(viewName);
                 return ds;
             }catch (Exception e){

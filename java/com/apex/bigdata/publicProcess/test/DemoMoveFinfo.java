@@ -134,12 +134,15 @@ public class DemoMoveFinfo {
                 SparkConfig.getSparkSession().sql("select * from spark" + table_name + " limit 10").show(10);
             }
             SparkRuntime.initSparkResultTempView("spark" + table_name, DB, "info_" + table_name);
+            logger.info("第三次创建临时表： ");
+            SparkConfig.getSparkSession().sql("select * from spark" + table_name + " limit 10").show(10);
+            String[] strings = SparkRuntime.exec("select * from spark" + table_name).schema().fieldNames();
+            List<String> schemas = Arrays.asList(strings);
+            System.out.println("视图的schema: " + schemas.toString());
 //            执行的hivesql为
             String hiveSql = getOverwriteSql(job, fileds, "spark" + table_name, 0).toString();
             System.out.println("执行的hivesql为：\n" + hiveSql);
-//            SparkRuntime.overwriteHiveOnePartitionBySql("saprkAnalysisResult", "adp_dm", "ids_t_stat_tzfx", tjrq);
-            SparkConfig.initStatic();
-            SparkConfig.getSparkSession().sql(hiveSql);
+             SparkConfig.getSparkSession().sql(hiveSql);
 //            SparkRuntime.exec(hiveSql);
             System.out.println(job.toString());
         }
@@ -200,8 +203,9 @@ public class DemoMoveFinfo {
      * 获取select段sql
      *
      * @param job
-     * @return table_name    sync_type	sync_col	jyr_dif
-     * txggl			1                       1
+     * @return
+     * table_name    sync_type	sync_col	jyr_dif
+     *   txggl			1                       1
      */
     private static StringBuffer getSelectSql(Map<String, Object> job, List<String> fields) {
         StringBuffer sql = new StringBuffer();
@@ -224,6 +228,9 @@ public class DemoMoveFinfo {
      * @param fields
      * @param withSyncCol
      * @return
+     *
+     *  * table_name    sync_type	sync_col	jyr_dif
+     *     txgg			1                       1
      */
     private static String joinFields(Map<String, Object> job, List<String> fields, Boolean withSyncCol, Boolean tranCode) {
         int num = fields.size();
