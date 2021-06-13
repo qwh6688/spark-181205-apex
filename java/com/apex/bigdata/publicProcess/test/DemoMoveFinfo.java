@@ -143,8 +143,7 @@ public class DemoMoveFinfo {
             String hiveSql = getOverwriteSql(job, fileds, "spark" + table_name, 0).toString();
             System.out.println("执行的hivesql为：\n" + hiveSql);
              SparkConfig.getSparkSession().sql(hiveSql);
-//            SparkRuntime.exec(hiveSql);
-            System.out.println(job.toString());
+             System.out.println(job.toString());
         }
     }
 
