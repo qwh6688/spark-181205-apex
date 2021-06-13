@@ -1,0 +1,379 @@
+[INFO][2021-06-09 00:48:28,309][org.apache.spark.sql.execution.SparkSqlParser:54] - Parsing command: insert overwrite table adp_cfg.info_txggl select ID,GPDM,GPJC,SGDM,FXZS,WSFX,DGSGSZ,SGSX,SGZJSX,FXJ,ZXJ,SRSPJ,SGRQ,ZQGBR,SSRQ,FXSYL,HYSYL,ZQL,MZYQY,DJZJ,XJLJBJBS,PSDXBJJS,DXSY,LXYZBSL,ZZF,JYS,SSBK from sparktxggl
+[WARN][2021-06-09 00:48:28,431][org.apache.spark.HeartbeatReceiver:66] - Removing executor driver with no recent heartbeats: 298388 ms exceeds timeout 120000 ms
+[INFO][2021-06-09 00:48:28,738][org.apache.spark.storage.BlockManagerInfo:54] - Removed broadcast_3_piece0 on 192.168.52.10:65292 in memory (size: 8.6 KB, free: 3.8 GB)
+[INFO][2021-06-09 00:48:28,749][org.apache.spark.ContextCleaner:54] - Cleaned accumulator 5027
+[INFO][2021-06-09 00:48:28,751][org.apache.spark.ContextCleaner:54] - Cleaned accumulator 5026
+[INFO][2021-06-09 00:48:28,751][org.apache.spark.ContextCleaner:54] - Cleaned accumulator 1
+[ERROR][2021-06-09 00:48:28,770][org.apache.spark.scheduler.TaskSchedulerImpl:70] - Lost executor driver on localhost: Executor heartbeat timed out after 298388 ms
+[INFO][2021-06-09 00:48:28,771][org.apache.spark.SparkContext:54] - Invoking stop() from shutdown hook
+[INFO][2021-06-09 00:48:28,773][org.apache.spark.ContextCleaner:54] - Cleaned shuffle 0
+[INFO][2021-06-09 00:48:28,775][org.apache.spark.storage.BlockManagerInfo:54] - Removed broadcast_0_piece0 on 192.168.52.10:65292 in memory (size: 16.2 KB, free: 3.8 GB)
+[INFO][2021-06-09 00:48:28,776][org.apache.spark.ContextCleaner:54] - Cleaned accumulator 4
+[INFO][2021-06-09 00:48:28,776][org.apache.spark.ContextCleaner:54] - Cleaned accumulator 2
+[INFO][2021-06-09 00:48:28,777][org.apache.spark.ContextCleaner:54] - Cleaned accumulator 3
+[INFO][2021-06-09 00:48:28,777][org.apache.spark.ContextCleaner:54] - Cleaned accumulator 5
+[INFO][2021-06-09 00:48:28,777][org.apache.spark.ContextCleaner:54] - Cleaned accumulator 0
+[INFO][2021-06-09 00:48:28,778][org.apache.spark.scheduler.DAGScheduler:54] - Executor lost: driver (epoch 1)
+[WARN][2021-06-09 00:48:28,778][org.apache.spark.rpc.netty.NettyRpcEnv:66] - Ignored message: true
+[WARN][2021-06-09 00:48:28,779][org.apache.spark.rpc.netty.NettyRpcEnv:66] - Ignored message: true
+[WARN][2021-06-09 00:48:28,779][org.apache.spark.rpc.netty.NettyRpcEnv:66] - Ignored message: true
+[WARN][2021-06-09 00:48:28,779][org.apache.spark.rpc.netty.NettyRpcEnv:66] - Ignored message: true
+[INFO][2021-06-09 00:48:28,781][org.apache.spark.storage.BlockManagerMasterEndpoint:54] - Trying to remove executor driver from BlockManagerMaster.
+[INFO][2021-06-09 00:48:28,781][org.spark_project.jetty.server.ServerConnector:306] - Stopped Spark@4e08acf9{HTTP/1.1}{0.0.0.0:4040}
+[INFO][2021-06-09 00:48:28,781][org.apache.spark.executor.Executor:54] - Told to re-register on heartbeat
+[INFO][2021-06-09 00:48:28,784][org.apache.spark.storage.BlockManager:54] - BlockManager BlockManagerId(driver, 192.168.52.10, 65292, None) re-registering with master
+[INFO][2021-06-09 00:48:28,785][org.apache.spark.storage.BlockManagerMasterEndpoint:54] - Removing block manager BlockManagerId(driver, 192.168.52.10, 65292, None)
+[WARN][2021-06-09 00:48:28,785][org.apache.spark.SparkContext:66] - Killing executors is only supported in coarse-grained mode
+[INFO][2021-06-09 00:48:28,785][org.apache.spark.storage.BlockManagerMaster:54] - Registering BlockManager BlockManagerId(driver, 192.168.52.10, 65292, None)
+[INFO][2021-06-09 00:48:28,786][org.apache.spark.storage.BlockManagerMasterEndpoint:54] - Registering block manager 192.168.52.10:65292 with 3.8 GB RAM, BlockManagerId(driver, 192.168.52.10, 65292, None)
+[INFO][2021-06-09 00:48:28,786][org.apache.spark.storage.BlockManagerMaster:54] - Removed driver successfully in removeExecutor
+[INFO][2021-06-09 00:48:28,786][org.apache.spark.storage.BlockManagerMaster:54] - Registered BlockManager BlockManagerId(driver, 192.168.52.10, 65292, None)
+[INFO][2021-06-09 00:48:28,788][org.apache.spark.storage.BlockManager:54] - Reporting 8 blocks to the master.
+[INFO][2021-06-09 00:48:28,788][org.apache.spark.scheduler.DAGScheduler:54] - Shuffle files lost for executor: driver (epoch 1)
+[INFO][2021-06-09 00:48:28,788][org.spark_project.jetty.server.handler.ContextHandler:865] - Stopped o.s.j.s.ServletContextHandler@75961f16{/stages/stage/kill,null,UNAVAILABLE,@Spark}
+[INFO][2021-06-09 00:48:28,788][org.spark_project.jetty.server.handler.ContextHandler:865] - Stopped o.s.j.s.ServletContextHandler@5d7ca698{/jobs/job/kill,null,UNAVAILABLE,@Spark}
+[INFO][2021-06-09 00:48:28,789][org.spark_project.jetty.server.handler.ContextHandler:865] - Stopped o.s.j.s.ServletContextHandler@1f77b5cc{/api,null,UNAVAILABLE,@Spark}
+[INFO][2021-06-09 00:48:28,790][org.spark_project.jetty.server.handler.ContextHandler:865] - Stopped o.s.j.s.ServletContextHandler@4207609e{/,null,UNAVAILABLE,@Spark}
+[INFO][2021-06-09 00:48:28,791][org.spark_project.jetty.server.handler.ContextHandler:865] - Stopped o.s.j.s.ServletContextHandler@2f00f851{/static,null,UNAVAILABLE,@Spark}
+[INFO][2021-06-09 00:48:28,791][org.spark_project.jetty.server.handler.ContextHandler:865] - Stopped o.s.j.s.ServletContextHandler@704641e3{/executors/threadDump/json,null,UNAVAILABLE,@Spark}
+[INFO][2021-06-09 00:48:28,792][org.spark_project.jetty.server.handler.ContextHandler:865] - Stopped o.s.j.s.ServletContextHandler@2a2ef072{/executors/threadDump,null,UNAVAILABLE,@Spark}
+[INFO][2021-06-09 00:48:28,792][org.apache.spark.storage.BlockManagerInfo:54] - Added broadcast_4_piece0 in memory on 192.168.52.10:65292 (size: 17.2 KB, free: 3.8 GB)
+[INFO][2021-06-09 00:48:28,792][org.spark_project.jetty.server.handler.ContextHandler:865] - Stopped o.s.j.s.ServletContextHandler@6850b758{/executors/json,null,UNAVAILABLE,@Spark}
+[INFO][2021-06-09 00:48:28,793][org.spark_project.jetty.server.handler.ContextHandler:865] - Stopped o.s.j.s.ServletContextHandler@17690e14{/executors,null,UNAVAILABLE,@Spark}
+[INFO][2021-06-09 00:48:28,793][org.spark_project.jetty.server.handler.ContextHandler:865] - Stopped o.s.j.s.ServletContextHandler@7a8406c2{/environment/json,null,UNAVAILABLE,@Spark}
+[INFO][2021-06-09 00:48:28,794][org.apache.spark.storage.BlockManagerInfo:54] - Added broadcast_7_piece0 in memory on 192.168.52.10:65292 (size: 124.0 B, free: 3.8 GB)
+[INFO][2021-06-09 00:48:28,794][org.spark_project.jetty.server.handler.ContextHandler:865] - Stopped o.s.j.s.ServletContextHandler@108a46d6{/environment,null,UNAVAILABLE,@Spark}
+[INFO][2021-06-09 00:48:28,795][org.spark_project.jetty.server.handler.ContextHandler:865] - Stopped o.s.j.s.ServletContextHandler@1fac1d5c{/storage/rdd/json,null,UNAVAILABLE,@Spark}
+[INFO][2021-06-09 00:48:28,796][org.apache.spark.storage.BlockManagerInfo:54] - Added broadcast_6_piece0 in memory on 192.168.52.10:65292 (size: 167.0 B, free: 3.8 GB)
+[INFO][2021-06-09 00:48:28,796][org.spark_project.jetty.server.handler.ContextHandler:865] - Stopped o.s.j.s.ServletContextHandler@9fc9f91{/storage/rdd,null,UNAVAILABLE,@Spark}
+[INFO][2021-06-09 00:48:28,797][org.spark_project.jetty.server.handler.ContextHandler:865] - Stopped o.s.j.s.ServletContextHandler@4715ae33{/storage/json,null,UNAVAILABLE,@Spark}
+[INFO][2021-06-09 00:48:28,797][org.apache.spark.storage.BlockManagerInfo:54] - Added broadcast_5_piece0 in memory on 192.168.52.10:65292 (size: 12.0 KB, free: 3.8 GB)
+[INFO][2021-06-09 00:48:28,798][org.spark_project.jetty.server.handler.ContextHandler:865] - Stopped o.s.j.s.ServletContextHandler@23a5818e{/storage,null,UNAVAILABLE,@Spark}
+[INFO][2021-06-09 00:48:28,798][org.spark_project.jetty.server.handler.ContextHandler:865] - Stopped o.s.j.s.ServletContextHandler@6daf7d37{/stages/pool/json,null,UNAVAILABLE,@Spark}
+[INFO][2021-06-09 00:48:28,798][org.apache.spark.scheduler.DAGScheduler:54] - Host added was in lost list earlier: localhost
+[INFO][2021-06-09 00:48:28,798][org.apache.spark.executor.Executor:54] - Told to re-register on heartbeat
+[INFO][2021-06-09 00:48:28,798][org.spark_project.jetty.server.handler.ContextHandler:865] - Stopped o.s.j.s.ServletContextHandler@65d57e4e{/stages/pool,null,UNAVAILABLE,@Spark}
+[INFO][2021-06-09 00:48:28,798][org.apache.spark.storage.BlockManager:54] - BlockManager BlockManagerId(driver, 192.168.52.10, 65292, None) re-registering with master
+[INFO][2021-06-09 00:48:28,799][org.spark_project.jetty.server.handler.ContextHandler:865] - Stopped o.s.j.s.ServletContextHandler@a2ddf26{/stages/stage/json,null,UNAVAILABLE,@Spark}
+[INFO][2021-06-09 00:48:28,799][org.apache.spark.storage.BlockManagerMaster:54] - Registering BlockManager BlockManagerId(driver, 192.168.52.10, 65292, None)
+[INFO][2021-06-09 00:48:28,799][org.spark_project.jetty.server.handler.ContextHandler:865] - Stopped o.s.j.s.ServletContextHandler@212dfd39{/stages/stage,null,UNAVAILABLE,@Spark}
+[WARN][2021-06-09 00:48:28,799][org.apache.hadoop.hive.metastore.RetryingMetaStoreClient:184] - MetaStoreClient lost connection. Attempting to reconnect.
+org.apache.thrift.transport.TTransportException: java.net.SocketException: Connection reset by peer: socket write error
+	at org.apache.thrift.transport.TIOStreamTransport.flush(TIOStreamTransport.java:161)
+	at org.apache.thrift.TServiceClient.sendBase(TServiceClient.java:73)
+	at org.apache.thrift.TServiceClient.sendBase(TServiceClient.java:62)
+	at org.apache.hadoop.hive.metastore.api.ThriftHiveMetastore$Client.send_get_table(ThriftHiveMetastore.java:1212)
+	at org.apache.hadoop.hive.metastore.api.ThriftHiveMetastore$Client.get_table(ThriftHiveMetastore.java:1203)
+	at org.apache.hadoop.hive.metastore.HiveMetaStoreClient.getTable(HiveMetaStoreClient.java:1208)
+	at org.apache.hadoop.hive.ql.metadata.SessionHiveMetaStoreClient.getTable(SessionHiveMetaStoreClient.java:131)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.hadoop.hive.metastore.RetryingMetaStoreClient.invoke(RetryingMetaStoreClient.java:156)
+	at com.sun.proxy.$Proxy9.getTable(Unknown Source)
+	at org.apache.hadoop.hive.ql.metadata.Hive.getTable(Hive.java:1115)
+	at org.apache.spark.sql.hive.client.HiveClientImpl$$anonfun$getTableOption$1.apply(HiveClientImpl.scala:361)
+	at org.apache.spark.sql.hive.client.HiveClientImpl$$anonfun$getTableOption$1.apply(HiveClientImpl.scala:359)
+	at org.apache.spark.sql.hive.client.HiveClientImpl$$anonfun$withHiveState$1.apply(HiveClientImpl.scala:279)
+	at org.apache.spark.sql.hive.client.HiveClientImpl.liftedTree1$1(HiveClientImpl.scala:226)
+	at org.apache.spark.sql.hive.client.HiveClientImpl.retryLocked(HiveClientImpl.scala:225)
+	at org.apache.spark.sql.hive.client.HiveClientImpl.withHiveState(HiveClientImpl.scala:268)
+	at org.apache.spark.sql.hive.client.HiveClientImpl.getTableOption(HiveClientImpl.scala:359)
+	at org.apache.spark.sql.hive.client.HiveClient$class.getTable(HiveClient.scala:74)
+	at org.apache.spark.sql.hive.client.HiveClientImpl.getTable(HiveClientImpl.scala:78)
+	at org.apache.spark.sql.hive.HiveExternalCatalog$$anonfun$org$apache$spark$sql$hive$HiveExternalCatalog$$getRawTable$1.apply(HiveExternalCatalog.scala:118)
+	at org.apache.spark.sql.hive.HiveExternalCatalog$$anonfun$org$apache$spark$sql$hive$HiveExternalCatalog$$getRawTable$1.apply(HiveExternalCatalog.scala:118)
+	at org.apache.spark.sql.hive.HiveExternalCatalog.withClient(HiveExternalCatalog.scala:97)
+	at org.apache.spark.sql.hive.HiveExternalCatalog.org$apache$spark$sql$hive$HiveExternalCatalog$$getRawTable(HiveExternalCatalog.scala:117)
+	at org.apache.spark.sql.hive.HiveExternalCatalog$$anonfun$getTable$1.apply(HiveExternalCatalog.scala:628)
+	at org.apache.spark.sql.hive.HiveExternalCatalog$$anonfun$getTable$1.apply(HiveExternalCatalog.scala:628)
+	at org.apache.spark.sql.hive.HiveExternalCatalog.withClient(HiveExternalCatalog.scala:97)
+	at org.apache.spark.sql.hive.HiveExternalCatalog.getTable(HiveExternalCatalog.scala:627)
+	at org.apache.spark.sql.hive.HiveMetastoreCatalog.lookupRelation(HiveMetastoreCatalog.scala:124)
+	at org.apache.spark.sql.hive.HiveSessionCatalog.lookupRelation(HiveSessionCatalog.scala:70)
+	at org.apache.spark.sql.catalyst.analysis.Analyzer$ResolveRelations$.org$apache$spark$sql$catalyst$analysis$Analyzer$ResolveRelations$$lookupTableFromCatalog(Analyzer.scala:457)
+	at org.apache.spark.sql.catalyst.analysis.Analyzer$ResolveRelations$$anonfun$apply$8.applyOrElse(Analyzer.scala:466)
+	at org.apache.spark.sql.catalyst.analysis.Analyzer$ResolveRelations$$anonfun$apply$8.applyOrElse(Analyzer.scala:464)
+	at org.apache.spark.sql.catalyst.plans.logical.LogicalPlan$$anonfun$resolveOperators$1.apply(LogicalPlan.scala:61)
+	at org.apache.spark.sql.catalyst.plans.logical.LogicalPlan$$anonfun$resolveOperators$1.apply(LogicalPlan.scala:61)
+	at org.apache.spark.sql.catalyst.trees.CurrentOrigin$.withOrigin(TreeNode.scala:70)
+	at org.apache.spark.sql.catalyst.plans.logical.LogicalPlan.resolveOperators(LogicalPlan.scala:60)
+	at org.apache.spark.sql.catalyst.analysis.Analyzer$ResolveRelations$.apply(Analyzer.scala:464)
+	at org.apache.spark.sql.catalyst.analysis.Analyzer$ResolveRelations$.apply(Analyzer.scala:454)
+	at org.apache.spark.sql.catalyst.rules.RuleExecutor$$anonfun$execute$1$$anonfun$apply$1.apply(RuleExecutor.scala:85)
+	at org.apache.spark.sql.catalyst.rules.RuleExecutor$$anonfun$execute$1$$anonfun$apply$1.apply(RuleExecutor.scala:82)
+	at scala.collection.LinearSeqOptimized$class.foldLeft(LinearSeqOptimized.scala:124)
+	at scala.collection.immutable.List.foldLeft(List.scala:84)
+	at org.apache.spark.sql.catalyst.rules.RuleExecutor$$anonfun$execute$1.apply(RuleExecutor.scala:82)
+	at org.apache.spark.sql.catalyst.rules.RuleExecutor$$anonfun$execute$1.apply(RuleExecutor.scala:74)
+	at scala.collection.immutable.List.foreach(List.scala:381)
+	at org.apache.spark.sql.catalyst.rules.RuleExecutor.execute(RuleExecutor.scala:74)
+	at org.apache.spark.sql.execution.QueryExecution.analyzed$lzycompute(QueryExecution.scala:69)
+	at org.apache.spark.sql.execution.QueryExecution.analyzed(QueryExecution.scala:67)
+	at org.apache.spark.sql.execution.QueryExecution.assertAnalyzed(QueryExecution.scala:50)
+	at org.apache.spark.sql.Dataset$.ofRows(Dataset.scala:63)
+	at org.apache.spark.sql.SparkSession.sql(SparkSession.scala:592)
+	at com.apex.bigdata.publicProcess.test.DemoMoveFinfo.moveData(DemoMoveFinfo.java:145)
+	at com.apex.bigdata.publicProcess.test.DemoMoveFinfo.main(DemoMoveFinfo.java:76)
+Caused by: java.net.SocketException: Connection reset by peer: socket write error
+	at java.net.SocketOutputStream.socketWrite0(Native Method)
+	at java.net.SocketOutputStream.socketWrite(SocketOutputStream.java:111)
+	at java.net.SocketOutputStream.write(SocketOutputStream.java:155)
+	at java.io.BufferedOutputStream.flushBuffer(BufferedOutputStream.java:82)
+	at java.io.BufferedOutputStream.flush(BufferedOutputStream.java:140)
+	at org.apache.thrift.transport.TIOStreamTransport.flush(TIOStreamTransport.java:159)
+	... 56 more
+[INFO][2021-06-09 00:48:28,800][org.spark_project.jetty.server.handler.ContextHandler:865] - Stopped o.s.j.s.ServletContextHandler@741f8dbe{/stages/json,null,UNAVAILABLE,@Spark}
+[INFO][2021-06-09 00:48:28,799][org.apache.spark.storage.BlockManagerMaster:54] - Registered BlockManager BlockManagerId(driver, 192.168.52.10, 65292, None)
+[INFO][2021-06-09 00:48:28,806][org.apache.spark.storage.BlockManager:54] - Reporting 8 blocks to the master.
+[INFO][2021-06-09 00:48:28,806][org.spark_project.jetty.server.handler.ContextHandler:865] - Stopped o.s.j.s.ServletContextHandler@10afe71a{/stages,null,UNAVAILABLE,@Spark}
+[INFO][2021-06-09 00:48:28,806][org.spark_project.jetty.server.handler.ContextHandler:865] - Stopped o.s.j.s.ServletContextHandler@1e86a5a7{/jobs/job/json,null,UNAVAILABLE,@Spark}
+[INFO][2021-06-09 00:48:28,806][org.apache.spark.storage.BlockManagerInfo:54] - Added broadcast_4_piece0 in memory on 192.168.52.10:65292 (size: 17.2 KB, free: 3.8 GB)
+[INFO][2021-06-09 00:48:28,807][org.spark_project.jetty.server.handler.ContextHandler:865] - Stopped o.s.j.s.ServletContextHandler@2e6f610d{/jobs/job,null,UNAVAILABLE,@Spark}
+[INFO][2021-06-09 00:48:28,807][org.spark_project.jetty.server.handler.ContextHandler:865] - Stopped o.s.j.s.ServletContextHandler@66f0548d{/jobs/json,null,UNAVAILABLE,@Spark}
+[INFO][2021-06-09 00:48:28,807][org.apache.spark.storage.BlockManagerInfo:54] - Added broadcast_7_piece0 in memory on 192.168.52.10:65292 (size: 124.0 B, free: 3.8 GB)
+[INFO][2021-06-09 00:48:28,808][org.spark_project.jetty.server.handler.ContextHandler:865] - Stopped o.s.j.s.ServletContextHandler@17d32e9b{/jobs,null,UNAVAILABLE,@Spark}
+[INFO][2021-06-09 00:48:28,808][org.apache.spark.storage.BlockManagerInfo:54] - Added broadcast_6_piece0 in memory on 192.168.52.10:65292 (size: 167.0 B, free: 3.8 GB)
+[INFO][2021-06-09 00:48:28,809][org.apache.spark.storage.BlockManagerInfo:54] - Added broadcast_5_piece0 in memory on 192.168.52.10:65292 (size: 12.0 KB, free: 3.8 GB)
+[INFO][2021-06-09 00:48:28,809][org.apache.spark.executor.Executor:54] - Told to re-register on heartbeat
+[INFO][2021-06-09 00:48:28,810][org.apache.spark.ui.SparkUI:54] - Stopped Spark web UI at http://192.168.52.10:4040
+[INFO][2021-06-09 00:48:28,810][org.apache.spark.storage.BlockManager:54] - BlockManager BlockManagerId(driver, 192.168.52.10, 65292, None) re-registering with master
+[INFO][2021-06-09 00:48:28,810][org.apache.spark.storage.BlockManagerMaster:54] - Registering BlockManager BlockManagerId(driver, 192.168.52.10, 65292, None)
+[INFO][2021-06-09 00:48:28,810][org.apache.spark.storage.BlockManagerMaster:54] - Registered BlockManager BlockManagerId(driver, 192.168.52.10, 65292, None)
+[INFO][2021-06-09 00:48:28,810][org.apache.spark.storage.BlockManager:54] - Reporting 8 blocks to the master.
+[INFO][2021-06-09 00:48:28,811][org.apache.spark.storage.BlockManagerInfo:54] - Added broadcast_4_piece0 in memory on 192.168.52.10:65292 (size: 17.2 KB, free: 3.8 GB)
+[INFO][2021-06-09 00:48:28,812][org.apache.spark.storage.BlockManagerInfo:54] - Added broadcast_7_piece0 in memory on 192.168.52.10:65292 (size: 124.0 B, free: 3.8 GB)
+[INFO][2021-06-09 00:48:28,813][org.apache.spark.storage.BlockManagerInfo:54] - Added broadcast_6_piece0 in memory on 192.168.52.10:65292 (size: 167.0 B, free: 3.8 GB)
+[INFO][2021-06-09 00:48:28,813][org.apache.spark.storage.BlockManagerInfo:54] - Added broadcast_5_piece0 in memory on 192.168.52.10:65292 (size: 12.0 KB, free: 3.8 GB)
+[INFO][2021-06-09 00:48:28,814][org.apache.spark.executor.Executor:54] - Told to re-register on heartbeat
+[INFO][2021-06-09 00:48:28,814][org.apache.spark.storage.BlockManager:54] - BlockManager BlockManagerId(driver, 192.168.52.10, 65292, None) re-registering with master
+[INFO][2021-06-09 00:48:28,814][org.apache.spark.storage.BlockManagerMaster:54] - Registering BlockManager BlockManagerId(driver, 192.168.52.10, 65292, None)
+[INFO][2021-06-09 00:48:28,814][org.apache.spark.storage.BlockManagerMaster:54] - Registered BlockManager BlockManagerId(driver, 192.168.52.10, 65292, None)
+[INFO][2021-06-09 00:48:28,814][org.apache.spark.storage.BlockManager:54] - Reporting 8 blocks to the master.
+[INFO][2021-06-09 00:48:28,815][org.apache.spark.storage.BlockManagerInfo:54] - Added broadcast_4_piece0 in memory on 192.168.52.10:65292 (size: 17.2 KB, free: 3.8 GB)
+[ERROR][2021-06-09 00:48:28,817][org.apache.spark.scheduler.LiveListenerBus:70] - SparkListenerBus has already stopped! Dropping event SparkListenerBlockUpdated(BlockUpdatedInfo(BlockManagerId(driver, 192.168.52.10, 65292, None),broadcast_4_piece0,StorageLevel(memory, 1 replicas),17581,0))
+[INFO][2021-06-09 00:48:28,818][org.apache.spark.storage.BlockManagerInfo:54] - Added broadcast_7_piece0 in memory on 192.168.52.10:65292 (size: 124.0 B, free: 3.8 GB)
+[ERROR][2021-06-09 00:48:28,818][org.apache.spark.scheduler.LiveListenerBus:70] - SparkListenerBus has already stopped! Dropping event SparkListenerBlockUpdated(BlockUpdatedInfo(BlockManagerId(driver, 192.168.52.10, 65292, None),broadcast_7_piece0,StorageLevel(memory, 1 replicas),124,0))
+[INFO][2021-06-09 00:48:28,818][org.apache.spark.storage.BlockManagerInfo:54] - Added broadcast_6_piece0 in memory on 192.168.52.10:65292 (size: 167.0 B, free: 3.8 GB)
+[ERROR][2021-06-09 00:48:28,818][org.apache.spark.scheduler.LiveListenerBus:70] - SparkListenerBus has already stopped! Dropping event SparkListenerBlockUpdated(BlockUpdatedInfo(BlockManagerId(driver, 192.168.52.10, 65292, None),broadcast_6_piece0,StorageLevel(memory, 1 replicas),167,0))
+[INFO][2021-06-09 00:48:28,819][org.apache.spark.storage.BlockManagerInfo:54] - Added broadcast_5_piece0 in memory on 192.168.52.10:65292 (size: 12.0 KB, free: 3.8 GB)
+[ERROR][2021-06-09 00:48:28,820][org.apache.spark.scheduler.LiveListenerBus:70] - SparkListenerBus has already stopped! Dropping event SparkListenerBlockUpdated(BlockUpdatedInfo(BlockManagerId(driver, 192.168.52.10, 65292, None),broadcast_5_piece0,StorageLevel(memory, 1 replicas),12335,0))
+[INFO][2021-06-09 00:48:28,820][org.apache.spark.executor.Executor:54] - Told to re-register on heartbeat
+[INFO][2021-06-09 00:48:28,820][org.apache.spark.storage.BlockManager:54] - BlockManager BlockManagerId(driver, 192.168.52.10, 65292, None) re-registering with master
+[INFO][2021-06-09 00:48:28,820][org.apache.spark.storage.BlockManagerMaster:54] - Registering BlockManager BlockManagerId(driver, 192.168.52.10, 65292, None)
+[ERROR][2021-06-09 00:48:28,821][org.apache.spark.scheduler.LiveListenerBus:70] - SparkListenerBus has already stopped! Dropping event SparkListenerBlockManagerAdded(1623170908821,BlockManagerId(driver, 192.168.52.10, 65292, None),4041757163)
+[INFO][2021-06-09 00:48:28,822][org.apache.spark.storage.BlockManagerMaster:54] - Registered BlockManager BlockManagerId(driver, 192.168.52.10, 65292, None)
+[INFO][2021-06-09 00:48:28,822][org.apache.spark.storage.BlockManager:54] - Reporting 8 blocks to the master.
+[INFO][2021-06-09 00:48:28,823][org.apache.spark.storage.BlockManagerInfo:54] - Added broadcast_4_piece0 in memory on 192.168.52.10:65292 (size: 17.2 KB, free: 3.8 GB)
+[ERROR][2021-06-09 00:48:28,823][org.apache.spark.scheduler.LiveListenerBus:70] - SparkListenerBus has already stopped! Dropping event SparkListenerBlockUpdated(BlockUpdatedInfo(BlockManagerId(driver, 192.168.52.10, 65292, None),broadcast_4_piece0,StorageLevel(memory, 1 replicas),17581,0))
+[INFO][2021-06-09 00:48:28,823][org.apache.spark.storage.BlockManagerInfo:54] - Added broadcast_7_piece0 in memory on 192.168.52.10:65292 (size: 124.0 B, free: 3.8 GB)
+[ERROR][2021-06-09 00:48:28,824][org.apache.spark.scheduler.LiveListenerBus:70] - SparkListenerBus has already stopped! Dropping event SparkListenerBlockUpdated(BlockUpdatedInfo(BlockManagerId(driver, 192.168.52.10, 65292, None),broadcast_7_piece0,StorageLevel(memory, 1 replicas),124,0))
+[INFO][2021-06-09 00:48:28,824][org.apache.spark.storage.BlockManagerInfo:54] - Added broadcast_6_piece0 in memory on 192.168.52.10:65292 (size: 167.0 B, free: 3.8 GB)
+[ERROR][2021-06-09 00:48:28,824][org.apache.spark.scheduler.LiveListenerBus:70] - SparkListenerBus has already stopped! Dropping event SparkListenerBlockUpdated(BlockUpdatedInfo(BlockManagerId(driver, 192.168.52.10, 65292, None),broadcast_6_piece0,StorageLevel(memory, 1 replicas),167,0))
+[INFO][2021-06-09 00:48:28,824][org.apache.spark.storage.BlockManagerInfo:54] - Added broadcast_5_piece0 in memory on 192.168.52.10:65292 (size: 12.0 KB, free: 3.8 GB)
+[ERROR][2021-06-09 00:48:28,825][org.apache.spark.scheduler.LiveListenerBus:70] - SparkListenerBus has already stopped! Dropping event SparkListenerBlockUpdated(BlockUpdatedInfo(BlockManagerId(driver, 192.168.52.10, 65292, None),broadcast_5_piece0,StorageLevel(memory, 1 replicas),12335,0))
+[INFO][2021-06-09 00:48:28,827][org.apache.spark.MapOutputTrackerMasterEndpoint:54] - MapOutputTrackerMasterEndpoint stopped!
+[INFO][2021-06-09 00:48:28,892][org.apache.spark.storage.memory.MemoryStore:54] - MemoryStore cleared
+[INFO][2021-06-09 00:48:28,892][org.apache.spark.storage.BlockManager:54] - BlockManager stopped
+[INFO][2021-06-09 00:48:28,894][org.apache.spark.storage.BlockManagerMaster:54] - BlockManagerMaster stopped
+[INFO][2021-06-09 00:48:28,897][org.apache.spark.scheduler.OutputCommitCoordinator$OutputCommitCoordinatorEndpoint:54] - OutputCommitCoordinator stopped!
+[INFO][2021-06-09 00:48:28,902][org.apache.spark.SparkContext:54] - Successfully stopped SparkContext
+[INFO][2021-06-09 00:48:28,903][org.apache.spark.util.ShutdownHookManager:54] - Shutdown hook called
+[INFO][2021-06-09 00:48:28,904][org.apache.spark.util.ShutdownHookManager:54] - Deleting directory C:\Users\14226\AppData\Local\Temp\spark-58918055-70a9-4244-ae54-7b63d8267e8c
+[INFO][2021-06-09 00:48:29,812][hive.metastore:376] - Trying to connect to metastore with URI thrift://192.168.52.100:9083
+[INFO][2021-06-09 00:48:48,919][org.apache.hadoop.ipc.Client:755] - Retrying connect to server: node01/192.168.52.100:8020. Already tried 0 time(s); maxRetries=45
+[WARN][2021-06-09 00:48:50,859][hive.metastore:428] - Failed to connect to the MetaStore Server...
+[INFO][2021-06-09 00:48:50,860][hive.metastore:459] - Waiting 1 seconds before next connection attempt.
+[INFO][2021-06-09 00:48:51,871][hive.metastore:376] - Trying to connect to metastore with URI thrift://192.168.52.100:9083
+[INFO][2021-06-09 00:49:08,932][org.apache.hadoop.ipc.Client:755] - Retrying connect to server: node01/192.168.52.100:8020. Already tried 1 time(s); maxRetries=45
+[WARN][2021-06-09 00:49:12,908][hive.metastore:428] - Failed to connect to the MetaStore Server...
+[INFO][2021-06-09 00:49:12,908][hive.metastore:459] - Waiting 1 seconds before next connection attempt.
+[INFO][2021-06-09 00:49:13,913][hive.metastore:376] - Trying to connect to metastore with URI thrift://192.168.52.100:9083
+[INFO][2021-06-09 00:49:28,936][org.apache.hadoop.ipc.Client:755] - Retrying connect to server: node01/192.168.52.100:8020. Already tried 2 time(s); maxRetries=45
+[WARN][2021-06-09 00:49:34,970][hive.metastore:428] - Failed to connect to the MetaStore Server...
+[INFO][2021-06-09 00:49:34,971][hive.metastore:459] - Waiting 1 seconds before next connection attempt.
+[WARN][2021-06-09 00:49:36,007][org.apache.spark.sql.hive.client.HiveClientImpl:87] - HiveClient got thrift exception, destroying client and retrying (0 tries remaining)
+org.apache.hadoop.hive.ql.metadata.HiveException: Unable to fetch table info_txggl. Could not connect to meta store using any of the URIs provided. Most recent failure: org.apache.thrift.transport.TTransportException: java.net.ConnectException: Connection timed out: connect
+	at org.apache.thrift.transport.TSocket.open(TSocket.java:226)
+	at org.apache.hadoop.hive.metastore.HiveMetaStoreClient.open(HiveMetaStoreClient.java:420)
+	at org.apache.hadoop.hive.metastore.HiveMetaStoreClient.reconnect(HiveMetaStoreClient.java:315)
+	at org.apache.hadoop.hive.metastore.RetryingMetaStoreClient.invoke(RetryingMetaStoreClient.java:148)
+	at com.sun.proxy.$Proxy9.getTable(Unknown Source)
+	at org.apache.hadoop.hive.ql.metadata.Hive.getTable(Hive.java:1115)
+	at org.apache.spark.sql.hive.client.HiveClientImpl$$anonfun$getTableOption$1.apply(HiveClientImpl.scala:361)
+	at org.apache.spark.sql.hive.client.HiveClientImpl$$anonfun$getTableOption$1.apply(HiveClientImpl.scala:359)
+	at org.apache.spark.sql.hive.client.HiveClientImpl$$anonfun$withHiveState$1.apply(HiveClientImpl.scala:279)
+	at org.apache.spark.sql.hive.client.HiveClientImpl.liftedTree1$1(HiveClientImpl.scala:226)
+	at org.apache.spark.sql.hive.client.HiveClientImpl.retryLocked(HiveClientImpl.scala:225)
+	at org.apache.spark.sql.hive.client.HiveClientImpl.withHiveState(HiveClientImpl.scala:268)
+	at org.apache.spark.sql.hive.client.HiveClientImpl.getTableOption(HiveClientImpl.scala:359)
+	at org.apache.spark.sql.hive.client.HiveClient$class.getTable(HiveClient.scala:74)
+	at org.apache.spark.sql.hive.client.HiveClientImpl.getTable(HiveClientImpl.scala:78)
+	at org.apache.spark.sql.hive.HiveExternalCatalog$$anonfun$org$apache$spark$sql$hive$HiveExternalCatalog$$getRawTable$1.apply(HiveExternalCatalog.scala:118)
+	at org.apache.spark.sql.hive.HiveExternalCatalog$$anonfun$org$apache$spark$sql$hive$HiveExternalCatalog$$getRawTable$1.apply(HiveExternalCatalog.scala:118)
+	at org.apache.spark.sql.hive.HiveExternalCatalog.withClient(HiveExternalCatalog.scala:97)
+	at org.apache.spark.sql.hive.HiveExternalCatalog.org$apache$spark$sql$hive$HiveExternalCatalog$$getRawTable(HiveExternalCatalog.scala:117)
+	at org.apache.spark.sql.hive.HiveExternalCatalog$$anonfun$getTable$1.apply(HiveExternalCatalog.scala:628)
+	at org.apache.spark.sql.hive.HiveExternalCatalog$$anonfun$getTable$1.apply(HiveExternalCatalog.scala:628)
+	at org.apache.spark.sql.hive.HiveExternalCatalog.withClient(HiveExternalCatalog.scala:97)
+	at org.apache.spark.sql.hive.HiveExternalCatalog.getTable(HiveExternalCatalog.scala:627)
+	at org.apache.spark.sql.hive.HiveMetastoreCatalog.lookupRelation(HiveMetastoreCatalog.scala:124)
+	at org.apache.spark.sql.hive.HiveSessionCatalog.lookupRelation(HiveSessionCatalog.scala:70)
+	at org.apache.spark.sql.catalyst.analysis.Analyzer$ResolveRelations$.org$apache$spark$sql$catalyst$analysis$Analyzer$ResolveRelations$$lookupTableFromCatalog(Analyzer.scala:457)
+	at org.apache.spark.sql.catalyst.analysis.Analyzer$ResolveRelations$$anonfun$apply$8.applyOrElse(Analyzer.scala:466)
+	at org.apache.spark.sql.catalyst.analysis.Analyzer$ResolveRelations$$anonfun$apply$8.applyOrElse(Analyzer.scala:464)
+	at org.apache.spark.sql.catalyst.plans.logical.LogicalPlan$$anonfun$resolveOperators$1.apply(LogicalPlan.scala:61)
+	at org.apache.spark.sql.catalyst.plans.logical.LogicalPlan$$anonfun$resolveOperators$1.apply(LogicalPlan.scala:61)
+	at org.apache.spark.sql.catalyst.trees.CurrentOrigin$.withOrigin(TreeNode.scala:70)
+	at org.apache.spark.sql.catalyst.plans.logical.LogicalPlan.resolveOperators(LogicalPlan.scala:60)
+	at org.apache.spark.sql.catalyst.analysis.Analyzer$ResolveRelations$.apply(Analyzer.scala:464)
+	at org.apache.spark.sql.catalyst.analysis.Analyzer$ResolveRelations$.apply(Analyzer.scala:454)
+	at org.apache.spark.sql.catalyst.rules.RuleExecutor$$anonfun$execute$1$$anonfun$apply$1.apply(RuleExecutor.scala:85)
+	at org.apache.spark.sql.catalyst.rules.RuleExecutor$$anonfun$execute$1$$anonfun$apply$1.apply(RuleExecutor.scala:82)
+	at scala.collection.LinearSeqOptimized$class.foldLeft(LinearSeqOptimized.scala:124)
+	at scala.collection.immutable.List.foldLeft(List.scala:84)
+	at org.apache.spark.sql.catalyst.rules.RuleExecutor$$anonfun$execute$1.apply(RuleExecutor.scala:82)
+	at org.apache.spark.sql.catalyst.rules.RuleExecutor$$anonfun$execute$1.apply(RuleExecutor.scala:74)
+	at scala.collection.immutable.List.foreach(List.scala:381)
+	at org.apache.spark.sql.catalyst.rules.RuleExecutor.execute(RuleExecutor.scala:74)
+	at org.apache.spark.sql.execution.QueryExecution.analyzed$lzycompute(QueryExecution.scala:69)
+	at org.apache.spark.sql.execution.QueryExecution.analyzed(QueryExecution.scala:67)
+	at org.apache.spark.sql.execution.QueryExecution.assertAnalyzed(QueryExecution.scala:50)
+	at org.apache.spark.sql.Dataset$.ofRows(Dataset.scala:63)
+	at org.apache.spark.sql.SparkSession.sql(SparkSession.scala:592)
+	at com.apex.bigdata.publicProcess.test.DemoMoveFinfo.moveData(DemoMoveFinfo.java:145)
+	at com.apex.bigdata.publicProcess.test.DemoMoveFinfo.main(DemoMoveFinfo.java:76)
+Caused by: java.net.ConnectException: Connection timed out: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at org.apache.thrift.transport.TSocket.open(TSocket.java:221)
+	... 48 more
+
+	at org.apache.hadoop.hive.ql.metadata.Hive.getTable(Hive.java:1123)
+	at org.apache.spark.sql.hive.client.HiveClientImpl$$anonfun$getTableOption$1.apply(HiveClientImpl.scala:361)
+	at org.apache.spark.sql.hive.client.HiveClientImpl$$anonfun$getTableOption$1.apply(HiveClientImpl.scala:359)
+	at org.apache.spark.sql.hive.client.HiveClientImpl$$anonfun$withHiveState$1.apply(HiveClientImpl.scala:279)
+	at org.apache.spark.sql.hive.client.HiveClientImpl.liftedTree1$1(HiveClientImpl.scala:226)
+	at org.apache.spark.sql.hive.client.HiveClientImpl.retryLocked(HiveClientImpl.scala:225)
+	at org.apache.spark.sql.hive.client.HiveClientImpl.withHiveState(HiveClientImpl.scala:268)
+	at org.apache.spark.sql.hive.client.HiveClientImpl.getTableOption(HiveClientImpl.scala:359)
+	at org.apache.spark.sql.hive.client.HiveClient$class.getTable(HiveClient.scala:74)
+	at org.apache.spark.sql.hive.client.HiveClientImpl.getTable(HiveClientImpl.scala:78)
+	at org.apache.spark.sql.hive.HiveExternalCatalog$$anonfun$org$apache$spark$sql$hive$HiveExternalCatalog$$getRawTable$1.apply(HiveExternalCatalog.scala:118)
+	at org.apache.spark.sql.hive.HiveExternalCatalog$$anonfun$org$apache$spark$sql$hive$HiveExternalCatalog$$getRawTable$1.apply(HiveExternalCatalog.scala:118)
+	at org.apache.spark.sql.hive.HiveExternalCatalog.withClient(HiveExternalCatalog.scala:97)
+	at org.apache.spark.sql.hive.HiveExternalCatalog.org$apache$spark$sql$hive$HiveExternalCatalog$$getRawTable(HiveExternalCatalog.scala:117)
+	at org.apache.spark.sql.hive.HiveExternalCatalog$$anonfun$getTable$1.apply(HiveExternalCatalog.scala:628)
+	at org.apache.spark.sql.hive.HiveExternalCatalog$$anonfun$getTable$1.apply(HiveExternalCatalog.scala:628)
+	at org.apache.spark.sql.hive.HiveExternalCatalog.withClient(HiveExternalCatalog.scala:97)
+	at org.apache.spark.sql.hive.HiveExternalCatalog.getTable(HiveExternalCatalog.scala:627)
+	at org.apache.spark.sql.hive.HiveMetastoreCatalog.lookupRelation(HiveMetastoreCatalog.scala:124)
+	at org.apache.spark.sql.hive.HiveSessionCatalog.lookupRelation(HiveSessionCatalog.scala:70)
+	at org.apache.spark.sql.catalyst.analysis.Analyzer$ResolveRelations$.org$apache$spark$sql$catalyst$analysis$Analyzer$ResolveRelations$$lookupTableFromCatalog(Analyzer.scala:457)
+	at org.apache.spark.sql.catalyst.analysis.Analyzer$ResolveRelations$$anonfun$apply$8.applyOrElse(Analyzer.scala:466)
+	at org.apache.spark.sql.catalyst.analysis.Analyzer$ResolveRelations$$anonfun$apply$8.applyOrElse(Analyzer.scala:464)
+	at org.apache.spark.sql.catalyst.plans.logical.LogicalPlan$$anonfun$resolveOperators$1.apply(LogicalPlan.scala:61)
+	at org.apache.spark.sql.catalyst.plans.logical.LogicalPlan$$anonfun$resolveOperators$1.apply(LogicalPlan.scala:61)
+	at org.apache.spark.sql.catalyst.trees.CurrentOrigin$.withOrigin(TreeNode.scala:70)
+	at org.apache.spark.sql.catalyst.plans.logical.LogicalPlan.resolveOperators(LogicalPlan.scala:60)
+	at org.apache.spark.sql.catalyst.analysis.Analyzer$ResolveRelations$.apply(Analyzer.scala:464)
+	at org.apache.spark.sql.catalyst.analysis.Analyzer$ResolveRelations$.apply(Analyzer.scala:454)
+	at org.apache.spark.sql.catalyst.rules.RuleExecutor$$anonfun$execute$1$$anonfun$apply$1.apply(RuleExecutor.scala:85)
+	at org.apache.spark.sql.catalyst.rules.RuleExecutor$$anonfun$execute$1$$anonfun$apply$1.apply(RuleExecutor.scala:82)
+	at scala.collection.LinearSeqOptimized$class.foldLeft(LinearSeqOptimized.scala:124)
+	at scala.collection.immutable.List.foldLeft(List.scala:84)
+	at org.apache.spark.sql.catalyst.rules.RuleExecutor$$anonfun$execute$1.apply(RuleExecutor.scala:82)
+	at org.apache.spark.sql.catalyst.rules.RuleExecutor$$anonfun$execute$1.apply(RuleExecutor.scala:74)
+	at scala.collection.immutable.List.foreach(List.scala:381)
+	at org.apache.spark.sql.catalyst.rules.RuleExecutor.execute(RuleExecutor.scala:74)
+	at org.apache.spark.sql.execution.QueryExecution.analyzed$lzycompute(QueryExecution.scala:69)
+	at org.apache.spark.sql.execution.QueryExecution.analyzed(QueryExecution.scala:67)
+	at org.apache.spark.sql.execution.QueryExecution.assertAnalyzed(QueryExecution.scala:50)
+	at org.apache.spark.sql.Dataset$.ofRows(Dataset.scala:63)
+	at org.apache.spark.sql.SparkSession.sql(SparkSession.scala:592)
+	at com.apex.bigdata.publicProcess.test.DemoMoveFinfo.moveData(DemoMoveFinfo.java:145)
+	at com.apex.bigdata.publicProcess.test.DemoMoveFinfo.main(DemoMoveFinfo.java:76)
+Caused by: MetaException(message:Could not connect to meta store using any of the URIs provided. Most recent failure: org.apache.thrift.transport.TTransportException: java.net.ConnectException: Connection timed out: connect
+	at org.apache.thrift.transport.TSocket.open(TSocket.java:226)
+	at org.apache.hadoop.hive.metastore.HiveMetaStoreClient.open(HiveMetaStoreClient.java:420)
+	at org.apache.hadoop.hive.metastore.HiveMetaStoreClient.reconnect(HiveMetaStoreClient.java:315)
+	at org.apache.hadoop.hive.metastore.RetryingMetaStoreClient.invoke(RetryingMetaStoreClient.java:148)
+	at com.sun.proxy.$Proxy9.getTable(Unknown Source)
+	at org.apache.hadoop.hive.ql.metadata.Hive.getTable(Hive.java:1115)
+	at org.apache.spark.sql.hive.client.HiveClientImpl$$anonfun$getTableOption$1.apply(HiveClientImpl.scala:361)
+	at org.apache.spark.sql.hive.client.HiveClientImpl$$anonfun$getTableOption$1.apply(HiveClientImpl.scala:359)
+	at org.apache.spark.sql.hive.client.HiveClientImpl$$anonfun$withHiveState$1.apply(HiveClientImpl.scala:279)
+	at org.apache.spark.sql.hive.client.HiveClientImpl.liftedTree1$1(HiveClientImpl.scala:226)
+	at org.apache.spark.sql.hive.client.HiveClientImpl.retryLocked(HiveClientImpl.scala:225)
+	at org.apache.spark.sql.hive.client.HiveClientImpl.withHiveState(HiveClientImpl.scala:268)
+	at org.apache.spark.sql.hive.client.HiveClientImpl.getTableOption(HiveClientImpl.scala:359)
+	at org.apache.spark.sql.hive.client.HiveClient$class.getTable(HiveClient.scala:74)
+	at org.apache.spark.sql.hive.client.HiveClientImpl.getTable(HiveClientImpl.scala:78)
+	at org.apache.spark.sql.hive.HiveExternalCatalog$$anonfun$org$apache$spark$sql$hive$HiveExternalCatalog$$getRawTable$1.apply(HiveExternalCatalog.scala:118)
+	at org.apache.spark.sql.hive.HiveExternalCatalog$$anonfun$org$apache$spark$sql$hive$HiveExternalCatalog$$getRawTable$1.apply(HiveExternalCatalog.scala:118)
+	at org.apache.spark.sql.hive.HiveExternalCatalog.withClient(HiveExternalCatalog.scala:97)
+	at org.apache.spark.sql.hive.HiveExternalCatalog.org$apache$spark$sql$hive$HiveExternalCatalog$$getRawTable(HiveExternalCatalog.scala:117)
+	at org.apache.spark.sql.hive.HiveExternalCatalog$$anonfun$getTable$1.apply(HiveExternalCatalog.scala:628)
+	at org.apache.spark.sql.hive.HiveExternalCatalog$$anonfun$getTable$1.apply(HiveExternalCatalog.scala:628)
+	at org.apache.spark.sql.hive.HiveExternalCatalog.withClient(HiveExternalCatalog.scala:97)
+	at org.apache.spark.sql.hive.HiveExternalCatalog.getTable(HiveExternalCatalog.scala:627)
+	at org.apache.spark.sql.hive.HiveMetastoreCatalog.lookupRelation(HiveMetastoreCatalog.scala:124)
+	at org.apache.spark.sql.hive.HiveSessionCatalog.lookupRelation(HiveSessionCatalog.scala:70)
+	at org.apache.spark.sql.catalyst.analysis.Analyzer$ResolveRelations$.org$apache$spark$sql$catalyst$analysis$Analyzer$ResolveRelations$$lookupTableFromCatalog(Analyzer.scala:457)
+	at org.apache.spark.sql.catalyst.analysis.Analyzer$ResolveRelations$$anonfun$apply$8.applyOrElse(Analyzer.scala:466)
+	at org.apache.spark.sql.catalyst.analysis.Analyzer$ResolveRelations$$anonfun$apply$8.applyOrElse(Analyzer.scala:464)
+	at org.apache.spark.sql.catalyst.plans.logical.LogicalPlan$$anonfun$resolveOperators$1.apply(LogicalPlan.scala:61)
+	at org.apache.spark.sql.catalyst.plans.logical.LogicalPlan$$anonfun$resolveOperators$1.apply(LogicalPlan.scala:61)
+	at org.apache.spark.sql.catalyst.trees.CurrentOrigin$.withOrigin(TreeNode.scala:70)
+	at org.apache.spark.sql.catalyst.plans.logical.LogicalPlan.resolveOperators(LogicalPlan.scala:60)
+	at org.apache.spark.sql.catalyst.analysis.Analyzer$ResolveRelations$.apply(Analyzer.scala:464)
+	at org.apache.spark.sql.catalyst.analysis.Analyzer$ResolveRelations$.apply(Analyzer.scala:454)
+	at org.apache.spark.sql.catalyst.rules.RuleExecutor$$anonfun$execute$1$$anonfun$apply$1.apply(RuleExecutor.scala:85)
+	at org.apache.spark.sql.catalyst.rules.RuleExecutor$$anonfun$execute$1$$anonfun$apply$1.apply(RuleExecutor.scala:82)
+	at scala.collection.LinearSeqOptimized$class.foldLeft(LinearSeqOptimized.scala:124)
+	at scala.collection.immutable.List.foldLeft(List.scala:84)
+	at org.apache.spark.sql.catalyst.rules.RuleExecutor$$anonfun$execute$1.apply(RuleExecutor.scala:82)
+	at org.apache.spark.sql.catalyst.rules.RuleExecutor$$anonfun$execute$1.apply(RuleExecutor.scala:74)
+	at scala.collection.immutable.List.foreach(List.scala:381)
+	at org.apache.spark.sql.catalyst.rules.RuleExecutor.execute(RuleExecutor.scala:74)
+	at org.apache.spark.sql.execution.QueryExecution.analyzed$lzycompute(QueryExecution.scala:69)
+	at org.apache.spark.sql.execution.QueryExecution.analyzed(QueryExecution.scala:67)
+	at org.apache.spark.sql.execution.QueryExecution.assertAnalyzed(QueryExecution.scala:50)
+	at org.apache.spark.sql.Dataset$.ofRows(Dataset.scala:63)
+	at org.apache.spark.sql.SparkSession.sql(SparkSession.scala:592)
+	at com.apex.bigdata.publicProcess.test.DemoMoveFinfo.moveData(DemoMoveFinfo.java:145)
+	at com.apex.bigdata.publicProcess.test.DemoMoveFinfo.main(DemoMoveFinfo.java:76)
+Caused by: java.net.ConnectException: Connection timed out: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at org.apache.thrift.transport.TSocket.open(TSocket.java:221)
+	... 48 more
+)
+	at org.apache.hadoop.hive.metastore.HiveMetaStoreClient.open(HiveMetaStoreClient.java:466)
+	at org.apache.hadoop.hive.metastore.HiveMetaStoreClient.reconnect(HiveMetaStoreClient.java:315)
+	at org.apache.hadoop.hive.metastore.RetryingMetaStoreClient.invoke(RetryingMetaStoreClient.java:148)
+	at com.sun.proxy.$Proxy9.getTable(Unknown Source)
+	at org.apache.hadoop.hive.ql.metadata.Hive.getTable(Hive.java:1115)
+	... 43 more
+[WARN][2021-06-09 00:49:37,014][org.apache.spark.sql.hive.client.HiveClientImpl:66] - Deadline exceeded
+[ERROR][2021-06-09 00:49:37,061][com.apex.bigdata.publicProcess.test.DemoMoveFinfo:91] - Operation not allowed after ResultSet closed
+[ERROR][2021-06-09 00:49:37,061][com.apex.bigdata.publicProcess.test.DemoMoveFinfo:92] - com.apex.bigdata.publicProcess.test.DemoMoveFinfo  Running Error : java.sql.SQLException: Operation not allowed after ResultSet closed
+[INFO][2021-06-09 00:49:48,950][org.apache.hadoop.ipc.Client:755] - Retrying connect to server: node01/192.168.52.100:8020. Already tried 3 time(s); maxRetries=45
+[INFO][2021-06-09 00:50:08,966][org.apache.hadoop.ipc.Client:755] - Retrying connect to server: node01/192.168.52.100:8020. Already tried 4 time(s); maxRetries=45
+[WARN][2021-06-09 08:42:09,924][org.apache.hadoop.ipc.Client:510] - Address change detected. Old: node01/192.168.52.100:8020 New: node01:8020
+[INFO][2021-06-09 08:42:09,928][org.apache.hadoop.fs.FileSystem:1385] - Ignoring failure to deleteOnExit for path /tmp/hive/hello/f86a7ace-f481-452e-82f9-04097995bd08
+[WARN][2021-06-09 08:42:09,929][org.apache.hadoop.ipc.Client:510] - Address change detected. Old: node01/192.168.52.100:8020 New: node01:8020
+[INFO][2021-06-09 08:42:09,929][org.apache.hadoop.fs.FileSystem:1385] - Ignoring failure to deleteOnExit for path /tmp/hive/hello/f86a7ace-f481-452e-82f9-04097995bd08/_tmp_space.db
